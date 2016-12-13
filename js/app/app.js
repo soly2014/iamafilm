@@ -342,42 +342,42 @@ app.controller('directorListCtrl', function ($scope) {
             profilePic: 'img/profile_pics/1.jpg',
             name: 'Mohamed Samir',
             country: 'Egypt',
-            country_id: 1
+            country_id: 'eg'
         },
 
         {
             profilePic: 'img/profile_pics/2.jpg',
-            name: 'Ahmed Magdy',
+            name: 'Pedro Aurellio',
             country: 'Spain',
-            country_id: 1
+            country_id: 'es'
         },
 
         {
             profilePic: 'img/profile_pics/3.jpg',
             name: 'John Doe',
             country: 'United Kingdom',
-            country_id: 2
+            country_id: 'gb'
         },
 
         {
             profilePic: 'img/profile_pics/4.jpg',
             name: 'Elton Smith',
             country: 'United Kingdom',
-            country_id: 2
+            country_id: 'gb'
         },
 
         {
             profilePic: 'img/profile_pics/5.jpg',
             name: 'Patrik Emanuel',
             country: 'France',
-            country_id: 3
+            country_id: 'fr'
         },
 
         {
             profilePic: 'img/profile_pics/6.jpg',
             name: 'Thierry Lillian',
             country: 'France',
-            country_id: 3
+            country_id: 'fr'
         }
     ];
     /**

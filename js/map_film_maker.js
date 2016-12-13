@@ -1,3 +1,48 @@
+
+
+  var filmmakers=[
+      {
+          profilePic: 'img/profile_pics/1.jpg',
+          name: 'Mohamed Samir',
+          country: 'Egypt',
+          country_code: 'eg'
+      },
+
+      {
+          profilePic: 'img/profile_pics/2.jpg',
+          name: 'Pedro Aurellio',
+          country: 'Spain',
+          country_code: 'es'
+      },
+
+      {
+          profilePic: 'img/profile_pics/3.jpg',
+          name: 'John Doe',
+          country: 'United Kingdom',
+          country_code: 'gb'
+      },
+
+      {
+          profilePic: 'img/profile_pics/4.jpg',
+          name: 'Elton Smith',
+          country: 'United Kingdom',
+          country_code: 'gb'
+      },
+
+      {
+          profilePic: 'img/profile_pics/5.jpg',
+          name: 'Patrik Emanuel',
+          country: 'France',
+          country_code: 'fr'
+      },
+
+      {
+          profilePic: 'img/profile_pics/6.jpg',
+          name: 'Thierry Lillian',
+          country: 'France',
+          country_code: 'fr'
+      }
+  ];
 jQuery('#vmap').vectorMap({
     // map: 'world_en',
     // backgroundColor: null,
@@ -24,16 +69,37 @@ jQuery('#vmap').vectorMap({
     selectedRegions: null,
     showTooltip: true,
 
-    onRegionClick: function(element, code, region)
-{
+    onRegionClick: function (element, code, region) {
 
 
-    var message = 'You clicked "'
-        + region
-        + '" which has the code: '
-        + code.toUpperCase();
+    // var message = 'You clicked "'
+    //     + region
+    //     + '" which has the code: '
+    //     + code;
+    //
+    //
+    // alert(message);
+      document.getElementById("profile_list").innerHTML = '';
+    for (var i = 0; i < filmmakers.length; i++) {
+      if (code == filmmakers[i].country_code) {
 
 
-    alert(message);
-}
+         var htmlAppear = `<div class="profilewrapper">  <div class="profile">
+              <div class="pic">
+                  <div class="img"><img src="`+ filmmakers[i].profilePic + `"/></div>
+                  <i class="icon-plus"></i>
+                  <i class="icon-ok"></i>
+              </div>
+              <h4>`+filmmakers[i].name+`</h4>
+              <p>Film Director</p>
+
+          </div> </div>`;
+           document.getElementById("profile_list").innerHTML += htmlAppear;
+
+    }
+
+        // document.getElementById("profile_list").innerHTML = htmlAppear;
+    }
+},
+
 });
