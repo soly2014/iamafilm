@@ -44,6 +44,7 @@
       }
   ];
 jQuery('#vmap').vectorMap({
+
     // map: 'world_en',
     // backgroundColor: null,
     // color: '#ffffff',
@@ -68,6 +69,7 @@ jQuery('#vmap').vectorMap({
     selectedColor: '#c9dfaf',
     selectedRegions: null,
     showTooltip: true,
+
 
     onRegionClick: function (element, code, region) {
 
