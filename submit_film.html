@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="css/vendors/animate.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
-    <link href="css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
 
 
     <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
@@ -125,6 +124,13 @@
                 </div>
 
                 <div class="festival-filter">
+                    <div class="form-group clearfix">
+
+                    <select ng-controller="filmsCtrl" class="form-control pull-left" >
+                        <option selected disabled>Choose a film</option>
+                        <option data-ng-repeat="film in films" value="{{film.title}}">{{film.title}}</option>
+                    </select>
+                    </div>
                     <div class="form-group" data-ng-model='festivalFilter'>
                         <div class="form-group search-fest">
                             <input value="" type="text" class="form-control" data-ng-model="festivalFilter" placeholder="Find your festival">
@@ -140,19 +146,6 @@
                     </div>
                 </div>
                 <div class="form-group clearfix">
-                    <select ng-controller="filmsCtrl" class="form-control pull-left" ng-model="film_type">
-                        <option selected disabled>Film Type</option>
-                        <option data-ng-repeat="film_type in film_types" value="{{film_type}}">{{film_type}}</option>
-                    </select>
-                </div>
-                <div class="form-group clearfix">
-                    <select ng-controller="filmsCtrl" class="form-control pull-left" >
-                        <option selected disabled>Choose a film</option>
-                        <option  data-ng-repeat="film in films" value="{{film.title}}" ng-show="film.type==film_type">{{film.title}}</option>
-                    </select>
-                </div>
-
-                <div class="form-group clearfix">
                     <p class="col-xs-4 text-right" style="line-height: 2.5">Show As</p>
                     <div class="col-xs-8">
                         <select class="form-control" data-ng-model="pageSize">
@@ -164,9 +157,9 @@
                     </div>
 
                 </div>
-                <div ng-controller="festivalCtrl" class="festival-box"
+                <div class="festival-box"
                      dir-paginate="festival in festivals
-                                        | filter: festivalFilter , film_type_filter
+                                        | filter: festivalFilter
                                         | orderBy: sortBy: reverse
                                         | itemsPerPage: pageSize"
                      pagination-id="festPagi">
@@ -181,7 +174,6 @@
                         <div class="festival-info">
                             <h4>
                                 {{festival.title}}
-
                             </h4>
                             <p>
                                 {{festival.t_description}}
@@ -189,13 +181,9 @@
                             <span style="    text-transform: capitalize;">
                                                     {{festival.country + ' ' + festival.date}}
                                                 </span>
-                            <!--<p>{{festival.film_type}}</p>-->
                         </div>
                         <form>
-                            <!--<select ng-controller="filmsCtrl" class="form-control pull-left" style="width:70%;">-->
-                                <!--<option selected disabled>Choose a film</option>-->
-                                <!--<option data-ng-repeat="film in films" value="{{film.title}}">{{film.title}}</option>-->
-                            <!--</select>-->
+
                             <div class="form-group">
                                 <input type="submit" class="btn btn-success pull-right" value="Submit">
                             </div>
@@ -248,7 +236,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <p>&copy; Copyrights. I am a film All Rights Reserved. Created by <a href="http://www.rootcave.com/">Root Cave.</a></p>
+                <p>@ Copyright. All Rights Reserved. Created by <a href="http://www.rootcave.com/">Root Cave.</a></p>
             </div>
         </div>
     </div>
@@ -273,7 +261,7 @@
 <script src="js/lib/bootstrap.min.js"></script>
 
 <!-- magnfic popup plugin -->
-<script src="js/lib/vendors/jquery.magnific-popup.min.js"></script>
+<script src="js/lib/jquery.magnific-popup.min.js"></script>
 
 <!-- Google-map -->
 <!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
