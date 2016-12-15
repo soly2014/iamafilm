@@ -126,6 +126,13 @@
                 <div class="festival-filter">
                     <div class="form-group clearfix">
 
+                        <select ng-controller="filmsCtrl" class="form-control pull-left" >
+                            <option selected disabled>Film Type</option>
+                            <option data-ng-repeat="film in films" value="{{film.title}}">{{film.title}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group clearfix">
+
                     <select ng-controller="filmsCtrl" class="form-control pull-left" >
                         <option selected disabled>Choose a film</option>
                         <option data-ng-repeat="film in films" value="{{film.title}}">{{film.title}}</option>

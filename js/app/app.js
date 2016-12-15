@@ -179,12 +179,31 @@ app.controller('festivalCtrl', function ($scope) {
 app.controller('filmsCtrl', function ($scope) {
     'use strict';
     $scope.feedLimit = 5;
+    $scope.film_genres = [
+        {
+            name:'Fiction',
+            type:'fiction'
+        },
+        {
+            name:'Documentary',
+            type:'documentary'
+        },
+        {
+            name:'Animation',
+            type:'animation'
+        },
+        {
+            name:'Experimental',
+            type:'experimental'
+        },
+    ];
     $scope.films = [
         {
 
-            title: ' Duis epicurei pri an',
+            title: 'Fiction Movie 1',
             country: ['Egypt', 'all'],
-            t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat...',
+            genre:'Fiction',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-20',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M',
@@ -193,9 +212,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['united state', 'all'],
+            title: 'Documentary Movie 1',
+            country: ['USA', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-09',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -203,9 +223,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['German', 'all'],
+            title: ' Animation Movie 1',
+            country: ['Germany', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Animation',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-10',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -213,9 +234,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
+            title: 'Experimental Movie 1',
             country: ['Egypt', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Experimental',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-20',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M',
@@ -224,9 +246,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['united state', 'all'],
+            title: ' Fiction Movie 2',
+            country: ['USA', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-09',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -234,9 +257,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['German', 'all'],
+            title: 'Documentary Movie 2',
+            country: ['Germany', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-10',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -244,9 +268,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
+            title: ' Animation Movie 2',
             country: ['Egypt', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Animation',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-20',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M',
@@ -255,9 +280,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['united state', 'all'],
+            title: 'Experimental Movie 2',
+            country: ['USA', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Experimental',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-09',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -265,9 +291,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['German', 'all'],
+            title: ' Fiction 3',
+            country: ['Germany', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-10',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -275,9 +302,11 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
+            title: ' Documentary 3',
             country: ['Egypt', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
+
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-20',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M',
@@ -286,9 +315,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['united state', 'all'],
+            title: 'Animation 3',
+            country: ['USA', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Animation',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-09',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -296,9 +326,11 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
-            country: ['German', 'all'],
+            title: ' Experimental 3',
+            country: ['Germany', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Experimental',
+
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-10',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
@@ -306,9 +338,10 @@ app.controller('filmsCtrl', function ($scope) {
 
         {
 
-            title: ' Duis epicurei pri an',
+            title: ' Fiction 4',
             country: ['Brazil', 'all'],
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '2016-02-08',
             video: 'https://www.youtube.com/embed/LlpMsiQkL0M'
