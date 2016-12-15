@@ -9,6 +9,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Egypt',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             type: ['submission', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '02-10-2016'
@@ -18,6 +19,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Egypt',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Animation',
             type: ['submission', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '02-10-2016'
@@ -27,6 +29,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Egypt',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
             type: ['submission', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '02-10-2016'
@@ -36,6 +39,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Egypt',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Experimental',
             type: ['submission', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '02-10-2016'
@@ -45,6 +49,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'USA',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             type: ['closed', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '01-10-2016'
@@ -53,6 +58,27 @@ app.controller('festivalCtrl', function ($scope) {
         {
             title: ' Duis epicurei pri an',
             country: 'USA',
+            t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
+            type: ['closed', 'all'],
+            thu: 'http://placehold.it/350x250/fdc91b/fff',
+            date: '01-10-2016'
+        },
+
+        {
+            title: ' Duis epicurei pri an',
+            country: 'USA',
+            t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Animation',
+            type: ['closed', 'all'],
+            thu: 'http://placehold.it/350x250/fdc91b/fff',
+            date: '01-10-2016'
+        },
+
+        {
+            title: ' Duis epicurei pri an',
+            country: 'USA',
+            genre:'Experimental',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
             type: ['closed', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
@@ -63,6 +89,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'USA',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             type: ['closed', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '01-10-2016'
@@ -72,24 +99,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'USA',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
-            type: ['closed', 'all'],
-            thu: 'http://placehold.it/350x250/fdc91b/fff',
-            date: '01-10-2016'
-        },
-
-        {
-            title: ' Duis epicurei pri an',
-            country: 'USA',
-            t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
-            type: ['closed', 'all'],
-            thu: 'http://placehold.it/350x250/fdc91b/fff',
-            date: '01-10-2016'
-        },
-
-        {
-            title: ' Duis epicurei pri an',
-            country: 'USA',
-            t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
             type: ['closed', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '01-10-2016'
@@ -99,6 +109,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Germany',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Animation',
             type: ['submission', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '03-10-2016'
@@ -108,6 +119,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Brazil',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Experimental',
             type: ['deadline', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '20-10-2016'
@@ -117,6 +129,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Brazil',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             type: ['deadline',  'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '20-10-2016'
@@ -126,6 +139,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Brazil',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
             type: ['deadline', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '20-10-2016'
@@ -135,6 +149,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Brazil',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Animation',
             type: ['deadline', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '20-10-2016'
@@ -144,6 +159,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Brazil',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Experimental',
             type: ['deadline', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '20-10-2016'
@@ -153,6 +169,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Brazil',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Fiction',
             type: ['deadline', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '20-10-2016'
@@ -162,6 +179,7 @@ app.controller('festivalCtrl', function ($scope) {
             title: ' Duis epicurei pri an',
             country: 'Brazil',
             t_description: 'Duis epicurei pri an. Vix et duis debitis denique, ius an soleat vidisse. Has ei putent consequat.',
+            genre:'Documentary',
             type: ['deadline', 'all'],
             thu: 'http://placehold.it/350x250/fdc91b/fff',
             date: '20-10-2016'
