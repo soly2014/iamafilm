@@ -140,6 +140,19 @@
                     </div>
                 </div>
                 <div class="form-group clearfix">
+                    <select ng-controller="filmsCtrl" class="form-control pull-left" ng-model="film_type">
+                        <option selected disabled>Film Type</option>
+                        <option data-ng-repeat="film_type in film_types" value="{{film_type}}">{{film_type}}</option>
+                    </select>
+                </div>
+                <div class="form-group clearfix">
+                    <select ng-controller="filmsCtrl" class="form-control pull-left" >
+                        <option selected disabled>Choose a film</option>
+                        <option  data-ng-repeat="film in films" value="{{film.title}}" ng-show="film.type==film_type">{{film.title}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group clearfix">
                     <p class="col-xs-4 text-right" style="line-height: 2.5">Show As</p>
                     <div class="col-xs-8">
                         <select class="form-control" data-ng-model="pageSize">
@@ -151,9 +164,9 @@
                     </div>
 
                 </div>
-                <div class="festival-box"
+                <div ng-controller="festivalCtrl" class="festival-box"
                      dir-paginate="festival in festivals
-                                        | filter: festivalFilter
+                                        | filter: festivalFilter , film_type_filter
                                         | orderBy: sortBy: reverse
                                         | itemsPerPage: pageSize"
                      pagination-id="festPagi">
@@ -168,6 +181,7 @@
                         <div class="festival-info">
                             <h4>
                                 {{festival.title}}
+
                             </h4>
                             <p>
                                 {{festival.t_description}}
@@ -175,12 +189,13 @@
                             <span style="    text-transform: capitalize;">
                                                     {{festival.country + ' ' + festival.date}}
                                                 </span>
+                            <!--<p>{{festival.film_type}}</p>-->
                         </div>
                         <form>
-                            <select ng-controller="filmsCtrl" class="form-control pull-left" style="width:70%;">
-                                <option selected disabled>Choose a film</option>
-                                <option data-ng-repeat="film in films" value="{{film.title}}">{{film.title}}</option>
-                            </select>
+                            <!--<select ng-controller="filmsCtrl" class="form-control pull-left" style="width:70%;">-->
+                                <!--<option selected disabled>Choose a film</option>-->
+                                <!--<option data-ng-repeat="film in films" value="{{film.title}}">{{film.title}}</option>-->
+                            <!--</select>-->
                             <div class="form-group">
                                 <input type="submit" class="btn btn-success pull-right" value="Submit">
                             </div>
