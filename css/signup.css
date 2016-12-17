@@ -13,8 +13,7 @@
 }
 
 .signup {
-    background: url(../img/grid_noise.png) repeat;
-    background-color: #ebebeb;
+    background-color: #fff;
     padding: 40px;
     margin-top: 22px;
 }
@@ -24,7 +23,7 @@ input, button, select, textarea {
 }
 
 .input-append .add-on, .input-prepend .add-on {
-    background-color: #dfe5e8;
+    background-color: #fff;
     border: none;
     display: inline-block;
     font-size: 14px;

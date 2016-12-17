@@ -108,13 +108,13 @@
             <div class="col-sm-6 col-sm-offset-3 text-center signup">
               <h3>Log In</h3><br />
               
-              <ul class="list-inline social-icons-signup">
-      					 <li><a class="twitter" href="#" target="_blank"><i class="fa fa-twitter fa-3x"></i></a></li>
-      					 <li><a class="facebook" href="#" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></li>
-      					 <li><a class="google" href="#" target="_blank"><i class="fa fa-google-plus fa-3x"></i></a></li>
-    					 </ul>
+              <!--<ul class="list-inline social-icons-signup">-->
+      					 <!--<li><a class="twitter" href="#" target="_blank"><i class="fa fa-twitter fa-3x"></i></a></li>-->
+      					 <!--<li><a class="facebook" href="#" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></li>-->
+      					 <!--<li><a class="google" href="#" target="_blank"><i class="fa fa-google-plus fa-3x"></i></a></li>-->
+    					 <!--</ul>-->
     					 
-    					 <p>------------ OR -------------</p>
+
               
               <form id="signup-form" class="form-horizontal" method="post" action="#">
           		<div class="control-group">
@@ -139,10 +139,21 @@
           	      <div class="controls">
           	       <button type="submit" class="btn-main"><i class="fa fa-sign-in"></i> Log In</button>
           	      </div>
-          	      <a class="small-message" href="signup.html"><small>Need An Account?</small></a>
-          	  </div>
-      
+                </div>
           	  </form>
+                <p class="small-message"><small>Don't have an account?</small></p>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="col-md-6">
+                            <button  class="btn-main" onclick="window.open('signup.html','_self')"> Sign up as Filmmaker</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button  class="btn-main" > Sign up as Festival</button>
+                        </div>
+
+                    </div>
+                </div>
       	  
           </div><!--End Span6-->
           
