@@ -128,14 +128,14 @@
 
                         <select ng-controller="filmsCtrl" class="form-control pull-left" >
                             <option selected disabled>Film Genre</option>
-                            <option data-ng-repeat="genre in film_genres" value="{{genre.type}}">{{genre.name}}</option>
+                            <option data-ng-repeat="genre in film_genres" value="{{genre.name}}">{{genre.name}}</option>
                         </select>
                     </div>
                     <div class="form-group clearfix">
 
                         <select ng-controller="filmsCtrl" class="form-control pull-left" >
                             <option selected disabled>Choose a film</option>
-                            <option data-ng-repeat="film in films" value="{{film.title}}">{{film.title}}</option>
+                            <option data-ng-repeat="film in films" value="{{film.title}}" >{{film.title}}</option>
                         </select>
                     </div>
 
