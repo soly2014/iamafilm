@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/vendors/custom-styles.css">
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/plugins.css">
-    <!--<link rel="stylesheet" href="css/signup.css">-->
+    <link rel="stylesheet" href="css/signup.css">
 
 
 
@@ -106,28 +106,28 @@
       
 
     <!--Content-->
-    <section id="signup">
+    <section id="signup" class="signup-margin">
       <div class="container">
         <div class="row">
             <div class="portlet light bordered" id="form_wizard_1">
                 <div class="portlet-title">
-                    <div class="caption">
-                        <i class=" icon-layers font-red"></i>
-                        <span class="caption-subject font-red bold uppercase"> Form Wizard -
-                                                <span class="step-title"> Step 1 of 4 </span>
-                                            </span>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-cloud-upload"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-wrench"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-trash"></i>
-                        </a>
-                    </div>
+                    <!--<div class="caption">-->
+                        <!--<i class=" icon-layers font-red"></i>-->
+                        <!--<span class="caption-subject font-red bold uppercase"> Form Wizard - -->
+                                                <!--<span class="step-title"> Step 1 of 4 </span>-->
+                                            <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="actions">-->
+                        <!--<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">-->
+                            <!--<i class="icon-cloud-upload"></i>-->
+                        <!--</a>-->
+                        <!--<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">-->
+                            <!--<i class="icon-wrench"></i>-->
+                        <!--</a>-->
+                        <!--<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">-->
+                            <!--<i class="icon-trash"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
                 </div>
                 <div class="portlet-body form">
                     <form class="form-horizontal" action="#" id="submit_form" method="POST">
@@ -174,6 +174,15 @@
                                         <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
                                     <div class="tab-pane active" id="tab1">
                                         <h3 class="block">Provide your account details</h3>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Full Name
+                                                <span class="required"> * </span>
+                                            </label>
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control" name="fullname" />
+                                                <span class="help-block"> Provide your Full Name </span>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Username
                                                 <span class="required"> * </span>
@@ -513,9 +522,9 @@
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="tab3">
-                                        <h3 class="block">Provide your billing and credit card details</h3>
+                                        <h3 class="block">Profession</h3>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Card Holder Name
+                                            <label class="control-label col-md-3">Profession
                                                 <span class="required"> * </span>
                                             </label>
                                             <div class="col-md-4">
