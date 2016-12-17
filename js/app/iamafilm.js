@@ -70,7 +70,7 @@
       });
 
 
-      // <!-- about , work , contact , follow -->
+      // <!-- about , filmography , awards ,contact  -->
 
 
       //about tab
@@ -85,21 +85,21 @@
       $("#about").click(function(e) {
           // e.preventDefault(); //prevent the link from actually navigating somewhere
           // $(this).addClass("clicked");
-          $("#work").removeClass("clicked"); //remove the clicked class from all other elements
+          $("#filmography").removeClass("clicked"); //remove the clicked class from all other elements
           $("#contact").removeClass("clicked");
-          $("#follow").removeClass("clicked");
+          $("#awards").removeClass("clicked");
           $("#about1").addClass("active");
-          $("#work1").removeClass("active");
+          $("#filmography1").removeClass("active");
           $("#contact1").removeClass("active");
-          $("#follow1").removeClass("active");
-          $("#work1").addClass("hidden");
+          $("#awards1").removeClass("active");
+          $("#filmography1").addClass("hidden");
           $("#contact1").addClass("hidden");
-          $("#follow1").addClass("hidden");
+          $("#awards1").addClass("hidden");
           $("#about1").removeClass("hidden");
 
       });
 
-      // <!-- about , work , contact , follow -->
+// <!-- about , filmography , awards ,contact  -->
 
 
       //work tab
@@ -111,25 +111,25 @@
       //         $(this).removeClass('mouseover');
       //     });
 
-      $("#work").click(function(e) {
+      $("#filmography").click(function(e) {
           // e.preventDefault(); //prevent the link from actually navigating somewhere
           // $(this).addClass("clicked");
           $("#about").removeClass("clicked"); //remove the clicked class from all other elements
           $("#contact").removeClass("clicked");
-          $("#follow").removeClass("clicked");
-          $("#work1").addClass("active");
+          $("#awards").removeClass("clicked");
+          $("#filmography").addClass("active");
           $("#about1").removeClass("active");
           $("#contact1").removeClass("active");
-          $("#follow1").removeClass("active");
+          $("#awards1").removeClass("active");
           $("#about1").addClass("hidden");
           $("#contact1").addClass("hidden");
-          $("#follow1").addClass("hidden");
-          $("#work1").removeClass("hidden");
+          $("#awards1").addClass("hidden");
+          $("#filmography1").removeClass("hidden");
 
 
       });
 
-      // <!-- about , work , contact , follow -->
+// <!-- about , filmography , awards ,contact  -->
 
       //contact tab
       // $("#contact")
@@ -144,21 +144,21 @@
           // e.preventDefault(); //prevent the link from actually navigating somewhere
           // $(this).addClass("clicked");
           $("#about").removeClass("clicked"); //remove the clicked class from all other elements
-          $("#work").removeClass("clicked");
-          $("#follow").removeClass("clicked");
-          $("#contact1").addClass("active");
+          $("#filmography").removeClass("clicked");
+          $("#awards").removeClass("clicked");
+          $("#contact").addClass("active");
           $("#about1").removeClass("active");
-          $("#work1").removeClass("active");
-          $("#follow1").removeClass("active");
+          $("#filmography1").removeClass("active");
+          $("#awards1").removeClass("active");
           $("#about1").addClass("hidden");
-          $("#work1").addClass("hidden");
-          $("#follow1").addClass("hidden");
+          $("#filmography1").addClass("hidden");
+          $("#awards1").addClass("hidden");
           $("#contact1").removeClass("hidden");
 
       });
 
 
-      // <!-- about , work , contact , follow -->
+// <!-- about , filmography , awards ,contact  -->
 
       //follow tab
       // $("#follow")
@@ -169,19 +169,19 @@
       //         $(this).removeClass('mouseover');
       //     });
 
-      $("#follow").click(function(e) {
+      $("#awards").click(function(e) {
           // e.preventDefault(); //prevent the link from actually navigating somewhere
           // $(this).addClass("clicked");
           $("#about").removeClass("clicked"); //remove the clicked class from all other elements
-          $("#work").removeClass("clicked");
-          $("#follow").removeClass("clicked");
-          $("#follow1").addClass("active");
+          $("#filmography").removeClass("clicked");
+          $("#contact").removeClass("clicked");
+          $("#awards").addClass("active");
           $("#about1").removeClass("active");
-          $("#work1").removeClass("active");
+          $("#filmography1").removeClass("active");
           $("#contact1").removeClass("active");
           $("#about1").addClass("hidden");
-          $("#work1").addClass("hidden");
+          $("#filmography1").addClass("hidden");
           $("#contact1").addClass("hidden");
-          $("#follow1").removeClass("hidden");
+          $("#awards1").removeClass("hidden");
 
       });
