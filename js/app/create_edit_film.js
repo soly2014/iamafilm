@@ -181,3 +181,64 @@ var ComponentsDateTimePickers = function() {
 App.isAngularJsApp() === !1 && jQuery(document).ready(function() {
     ComponentsDateTimePickers.init()
 });
+
+
+
+/*
+
+
+start adding by soly
+
+*/
+
+
+    $(document).ready(function() {
+
+            $('body').on('click','#adddirsubmit',function(e){
+            
+                e.preventDefault();
+                $('#adddir').modal('hide');
+                $('#adddirrec').val($('#adddirinput').val());
+                $('#adddirdis').show();
+
+
+            });       
+
+       
+          $('body').on('click','#addprodsubmit',function(e){
+
+                e.preventDefault();
+                $('#addprod').modal('hide');
+                $('#addprodrec').val($('#addprodinput').val());
+                $('#addproddis').show();
+
+
+            });       
+
+   
+          $('body').on('click','#adddistsubmit',function(e){
+            
+                e.preventDefault();
+                $('#adddist').modal('hide');
+                $('#adddistrec').val($('#adddistinput').val());
+                $('#adddistdis').show();
+
+
+            });       
+
+  
+           $('body').on('click','#addproductsubmit',function(e){
+            
+                e.preventDefault();
+                $('#addproduct').modal('hide');
+                $('#addproductrec').val($('#addproductinput').val());
+                $('#addproductdis').show();
+
+
+            });       
+
+    });
+
+
+
+

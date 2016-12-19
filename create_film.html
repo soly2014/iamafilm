@@ -1128,17 +1128,17 @@
                                                         <div class="row dir-prod">
                                                             <div class="col-md-6">
                                                                 <div class="col-md-12">
-                                                                    <a class=" btn orange-default btn-outline sbold" href="modal_ajax_add_director.html" data-target="#ajax" data-toggle="modal"> <i class="fa fa-plus-circle"></i> Add Director </a>
+                                                                    <a type="button" class=" btn orange-default btn-outline sbold" data-toggle="modal" data-target="#adddir" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Director </a>
 
                                                                 </div>
                                                                 <div class="col-md-12">
                                                                     <h4>DIRECTOR:</h4>
                                                                 </div>
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-12" id="adddirdis" style="display: none;">
                                                                     <div class="input-group">
                                                                         <div class="input-group-btn">
                                                                             <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                <i class="fa fa-angle-down"></i>
+                                                                                <i class="fa fa-angle-down"></i> 
                                                                             </button>
                                                                             <ul class="dropdown-menu">
 
@@ -1152,18 +1152,18 @@
                                                                             </ul>
                                                                         </div>
                                                                         <!-- /btn-group -->
-                                                                        <input type="text" class="form-control" readonly> </div>
+                                                                        <input type="text" id="adddirrec" value="" class="form-control" readonly> </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="col-md-12">
-                                                                    <a class=" btn orange-default btn-outline sbold" href="modal_ajax_add_director.html" data-target="#ajax" data-toggle="modal"> <i class="fa fa-plus-circle"></i> Add Producer </a>
+                                                                    <a type="button" class=" btn orange-default btn-outline sbold"  data-toggle="modal" data-target="#addprod" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Producer </a>
 
                                                                 </div>
                                                                 <div class="col-md-12">
                                                                     <h4>PRODUCER:</h4>
                                                                 </div>
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-12"  id="addproddis" style="display: none;">
                                                                     <div class="input-group">
                                                                         <div class="input-group-btn">
                                                                             <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
@@ -1181,7 +1181,7 @@
                                                                             </ul>
                                                                         </div>
                                                                         <!-- /btn-group -->
-                                                                        <input type="text" class="form-control" readonly> </div>
+                                                                        <input type="text" id="addprodrec" value=""  class="form-control" readonly> </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1191,13 +1191,13 @@
                                                         <div class="row dist-prod">
                                                             <div class="col-md-6">
                                                                 <div class="col-md-12">
-                                                                    <a class=" btn orange-default btn-outline sbold" href="modal_ajax_add_director.html" data-target="#ajax" data-toggle="modal"> <i class="fa fa-plus-circle"></i> Add Distribution Company </a>
+                                                                    <a type="button" class=" btn orange-default btn-outline sbold"  data-toggle="modal" data-target="#adddist" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Distribution Company </a>
 
                                                                 </div>
                                                                 <div class="col-md-12">
                                                                     <h4>DISTRIBUTION COMPANY:</h4>
                                                                 </div>
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-12" id="adddistdis" style="display: none;">
                                                                     <div class="input-group">
                                                                         <div class="input-group-btn">
                                                                             <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
@@ -1215,18 +1215,18 @@
                                                                             </ul>
                                                                         </div>
                                                                         <!-- /btn-group -->
-                                                                        <input type="text" class="form-control" readonly> </div>
+                                                                        <input type="text" id="adddistrec" value=""  class="form-control" readonly> </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="col-md-12">
-                                                                    <a class=" btn orange-default btn-outline sbold" href="modal_ajax_add_director.html" data-target="#ajax" data-toggle="modal"> <i class="fa fa-plus-circle"></i> Add Production Company </a>
+                                                                    <a type="button" class=" btn orange-default btn-outline sbold"  data-toggle="modal" data-target="#addproduct" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Production Company </a>
 
                                                                 </div>
                                                                 <div class="col-md-12">
                                                                     <h4>PRODUCTION COMPANY:</h4>
                                                                 </div>
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-12" id="addproductdis" style="display: none;">
                                                                     <div class="input-group">
                                                                         <div class="input-group-btn">
                                                                             <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
@@ -1244,7 +1244,7 @@
                                                                             </ul>
                                                                         </div>
                                                                         <!-- /btn-group -->
-                                                                        <input type="text" class="form-control" readonly>
+                                                                        <input type="text" id="addproductrec" value=""  class="form-control" readonly>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1673,6 +1673,126 @@
     </div>
 </section>
 
+
+<!-- add modals -->
+
+    <!-- add director modal -->
+    <div class="modal fade" id="adddir" tabindex="-1" role="dialog" aria-labelledby="adddirLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="adddirLabel">Add Director</h4>
+          </div>
+          <div class="modal-body">
+            <form id="adddirform">
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Director Name:</label>
+                <input type="text" class="form-control" id="adddirinput" placeholder="Soliman Mahmoud" required>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Director Email:</label>
+                <input type="email" class="form-control" placeholder="Example@Example.com"  required>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Director Phone:</label>
+                <input type="tel" class="form-control" placeholder="00201013754233"  required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
+            <button type="submit" form="adddirform" id="adddirsubmit" class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Director</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end add director modal -->
+
+    <!-- add producer modal -->
+    <div class="modal fade" id="addprod" tabindex="-1" role="dialog" aria-labelledby="addprodLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="addprodLabel">Add Producer</h4>
+          </div>
+          <div class="modal-body">
+            <form id="addprodform">
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Producer Name:</label>
+                <input type="text" class="form-control" id="addprodinput" required>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Producer Email:</label>
+                <input type="email" class="form-control" placeholder="Example@Example.com"  required>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Producer Phone:</label>
+                <input type="tel" class="form-control" placeholder="00201013754233"  required>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
+            <button type="submit" form="addprodform"  id="addprodsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Producer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end add producer modal -->
+
+    <!-- add Distribution Company modal -->
+    <div class="modal fade" id="adddist" tabindex="-1" role="dialog" aria-labelledby="adddistLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="adddistLabel">Add Distribution Company</h4>
+          </div>
+          <div class="modal-body">
+            <form id="adddistform">
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Distribution Company Name:</label>
+                <input type="text" class="form-control" id="adddistinput" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
+            <button type="submit" form="adddistform" id="adddistsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Distribution Company</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end add Distribution modal -->
+
+    <!-- add Production Company modal -->
+    <div class="modal fade" id="addproduct" tabindex="-1" role="dialog" aria-labelledby="addproductLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="addproductLabel">Add Production Company</h4>
+          </div>
+          <div class="modal-body">
+            <form id="addproductform">
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Production Company Name:</label>
+                <input type="text" class="form-control" id="addproductinput" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
+            <button type="submit" form="addproductform" id="addproductsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Production Company</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end add Production Company modal -->
+<!-- end modals -->
 
 <!-- Javascript
 ================================================== -->
