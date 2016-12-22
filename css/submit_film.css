@@ -1,4 +1,6 @@
-
+.margin-0{
+    margin-left: 0;
+}
 .box {
     overflow: hidden;
     padding: 10px;
