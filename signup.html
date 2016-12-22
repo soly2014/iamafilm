@@ -24,12 +24,14 @@
 
     <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
 
+    <link rel="stylesheet" href="js/lib/vendors/jquery-file-upload/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="js/lib/vendors/jquery-file-upload/css/jquery.fileupload-ui.css">
     <link href="css/vendors/select2.min.css" rel="stylesheet" type="text/css" />
     <link href="css/vendors/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/vendors/custom-styles.css">
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" href="css/signup.css">
 
 
@@ -225,15 +227,23 @@
                                     </div>
                                     <div class="tab-pane" id="tab2">
                                         <h3 class="block">Provide your profile details</h3>
+                                        <!--Press Kit -->
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Fullname
+                                            <label class="col-md-3 control-label">Profile Picture :
                                                 <span class="required"> * </span>
                                             </label>
                                             <div class="col-md-4">
-                                                <input type="text" class="form-control" name="fullname" />
-                                                <span class="help-block"> Provide your fullname </span>
+                                                <div class="input-group">
+                                                    <label class="input-group-btn">
+                                                                                <span class="btn btn-primary">
+                                                                                    Browse&hellip; <input type="file" style="display: none;" >
+                                                                                </span>
+                                                    </label>
+                                                    <input type="text" class="form-control" readonly>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!--End Press Kit -->
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Phone Number
                                                 <span class="required"> * </span>
@@ -517,12 +527,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Remarks</label>
-                                            <div class="col-md-4">
-                                                <textarea class="form-control" rows="3" name="remarks"></textarea>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="tab-pane" id="tab3">
                                         <h3 class="block">Profession</h3>
@@ -531,7 +536,7 @@
                                                 <span class="required"> * </span>
                                             </label>
                                             <div class="col-md-4">
-                                                <select  id="multiple" class=" form-control select2-multiple" name="profession" multiple >
+                                                <select  id="multiple" class=" form-control select2-multiple"  multiple >
                                                     <optgroup label="I am a film" >
                                                         <option value="director">Director</option>
                                                         <option value="producer">Producer</option>
@@ -725,9 +730,9 @@
                             <div class="form-actions">
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-9">
-                                        <a href="javascript:;" class="btn default button-previous">
+                                        <a href="javascript:;" class="btn default button-previous btn-inverse">
                                             <i class="fa fa-angle-left"></i> Back </a>
-                                        <a href="javascript:;" class="btn btn-outline green button-next"> Continue
+                                        <a href="javascript:;" class="btn btn-outline btn-primary button-next margin-20"> Continue
                                             <i class="fa fa-angle-right"></i>
                                         </a>
                                         <a href="javascript:;" class="btn green button-submit"> Submit
@@ -793,12 +798,37 @@
     <script src="js/lib/bootstrap.min.js"></script>
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="js/lib/vendors/select2.full.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/scripts/app.min.js" type="text/javascript"></script>
 <script src="js/lib/vendors/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="js/lib/vendors/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+
+
+<script src="js/lib/vendors/select2.full.min.js" type="text/javascript"></script>
+
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/tmpl.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/load-image.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/canvas-to-blob.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/tmpl.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/load-image.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/vendor/canvas-to-blob.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-process.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-image.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-audio.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-video.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-validate.js" type="text/javascript"></script>
+<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-ui.js" type="text/javascript"></script>
 <script src="js/lib/vendors/bootstrap-wizard/jquery.bootstrap.wizard.min.js" type="text/javascript"></script>
 <script src="js/lib/vendors/select2/js/select2.full.min.js"></script>
 <script src="js/lib/vendors/scripts/components-select2.min.js" type="text/javascript"></script>
+<script src="js/lib/vendors/scripts/form-fileupload.min.js" type="text/javascript"></script>
+
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
 <script src="js/lib/vendors/scripts/app.min.js" type="text/javascript"></script>
