@@ -88,7 +88,7 @@ jQuery('#vmap').vectorMap({
 
          var htmlAppear = `<div class="profilewrapper">  <div class="profile">
               <div class="pic">
-                  <div class="img"><img src="`+ filmmakers[i].profilePic + `"/></div>
+                  <div class="img"><img class="profile_img" src="`+ filmmakers[i].profilePic + `"/></div>
                   <i class="icon-plus"></i>
                   <i class="icon-ok"></i>
               </div>

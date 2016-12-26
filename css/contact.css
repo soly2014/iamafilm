@@ -15,24 +15,42 @@
     width: 100%;
 }
 
-
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-    background-color: #ffffff;
-    border: 0 solid #CCCCCC;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.035) inset;
-    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+.jumbotron {
+    background: #358CCE;
+    color: #FFF;
+    border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+    padding-bottom: 24px; }
+.jumbotron small {
+    color: #FFF;
+}
+.h1 small {
+    font-size: 24px;
 }
 
-select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-    border-radius: 2px 2px 2px 2px;
-    color: #555555;
-    display: inline-block;
-    height: 37px;
-    font-size: 14px;
-    line-height: 15px;
-    margin-bottom: 0px;
-    padding: 2px 6px;
-    vertical-align: middle;
+#message {
+    background: #fff;
 }
+
+
+/*textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {*/
+    /*background-color: #ffffff;*/
+    /*border: 0 solid #CCCCCC;*/
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.035) inset;*/
+    /*transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;*/
+/*}*/
+
+/*select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {*/
+    /*border-radius: 2px 2px 2px 2px;*/
+    /*color: #555555;*/
+    /*display: inline-block;*/
+    /*height: 37px;*/
+    /*font-size: 14px;*/
+    /*line-height: 15px;*/
+    /*margin-bottom: 0px;*/
+    /*padding: 2px 6px;*/
+    /*vertical-align: middle;*/
+/*}*/
 
 
