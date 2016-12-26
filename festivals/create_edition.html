@@ -71,7 +71,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand img-responsive" href="index.html"><img class="brand-logo" src="img/logo.png" alt="logo"></a>
+            <a class="navbar-brand img-responsive" href="submitted_films.html"><img class="brand-logo" src="../img/logo.png" alt="logo"></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -116,1548 +116,131 @@
 
 <section id="main" class="margin-top-100">
     <div class="container">
-      <div class="row">
-                            <div class="col-md-12">
-                                <form class="form-horizontal form-row-seperated" action="#">
-                                    <div class="portlet">
-                                        <div class="portlet-title">
-                                            <div class="caption">
-                                                <i class="fa fa-film"></i>Create Film </div>
-                                            <div class="actions btn-set">
-                                                <button type="button" name="back" class="btn btn-secondary-outline">
-                                                    <i class="fa fa-angle-left"></i> Back</button>
-                                                <button class="btn btn-secondary-outline">
-                                                    <i class="fa fa-reply"></i> Reset</button>
-                                                <button class="btn btn-success">
-                                                    <i class="fa fa-check"></i> Save</button>
-                                                <button class="btn btn-success">
-                                                    <i class="fa fa-check-circle"></i> Save & Continue Edit</button>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-success dropdown-toggle" href="javascript:;" data-toggle="dropdown">
-                                                        <i class="fa fa-share"></i> More
-                                                        <i class="fa fa-angle-down"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu pull-right">
-                                                        <li>
-                                                            <a href="javascript:;"> Duplicate </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;"> Delete </a>
-                                                        </li>
-                                                        <li class="dropdown-divider"> </li>
-                                                        <li>
-                                                            <a href="javascript:;"> Print </a>
-                                                        </li>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="portlet-body">
-                                            <div class="tabbable-bordered">
-                                                <ul class="nav nav-tabs">
-                                                    <li class="active">
-                                                        <a href="#tab_general" data-toggle="tab"> General </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#tab_prod" data-toggle="tab"> Production & Credits </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#tab_film_materials" data-toggle="tab"> Film Materials </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#tab_promotion" data-toggle="tab"> Promotion
-                                                            <!--<span class="badge badge-success"> 3 </span>-->
-                                                        </a>
-                                                    </li>
-                                                    
-                                                    <li>
-                                                        <a href="#tab_awards" data-toggle="tab"> Selections & Awards </a>
-                                                    </li>
-                                                </ul>
-                                                <div class="tab-content">
-                                                    <div class="tab-pane active" id="tab_general">
-                                                        
-                                                        <div class="form-body">
-                                                           <!--Original Title-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Original Title:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[original_title]" placeholder=""> 
-                                                                    </div>
-                                                            </div>
-                                                            <!--End Original Title-->
-                                                            <!--English Title-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">English Title:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[english_title]" placeholder=""> </div>
-                                                            </div>
-                                                            <!--End English Title-->
-                                                                <!--<div class="col-md-10">-->
-                                                                    <!--<input type="text" class="form-control" name="film[production_date]" placeholder=""> -->
-                                                                <!--</div>-->
-                                                                <div class="form-group">
-                                                                    <label class="col-md-2 control-label">Production Date:
-                                                                        <span class="required"> * </span>
-                                                                    </label>
-                                                                    <div class="col-md-10">
-                                                                        <div class="input-group input-medium date date-picker" data-date="new Date()" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
-                                                                            <input type="text" class="form-control" readonly>
-                                                                            <span class="input-group-btn">
-                                                                <button class="btn default" type="button">
-                                                                    <i class="fa fa-calendar"></i>
-                                                                </button>
-                                                            </span>
-                                                                        </div>
-                                                                        <!-- /input-group -->
-                                                                    </div>
-                                                                </div><!--date picker ends -->
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Film Url:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[film_url]" placeholder="film display name ,e.g: filmname2016"> </div>
-                                                            </div>
-                                                            <!--Languages-->
-                                                            <div class="form-group">
-                                                                <label   class="col-md-2 control-label">Languages:
-                                                                <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                <select  id="multiple" class=" form-control select2-multiple" multiple>
-                                                                    <optgroup label="Languages" >
-                                                                        <option value="ab">Abkhazian</option>
-                                                                        <option value="aa" >Afar</option>
-                                                                        <option value="ab">Abkhazian</option>
-                                                                        <option value="af" >Afrikaans</option>
-                                                                        <option value="sq">Albanian</option>
-                                                                        <option value="aa" >Amharic</option>
-                                                                        <option value="am">Abkhazian</option>
-                                                                        <option value="ar" >Arabic</option>
-                                                                        <option value="an">Aragonese</option>
-                                                                        <option value="hy" >Armenian</option>
-                                                                        <option value="ab">Assamese</option>
-                                                                        <option value="aa" >Aymara</option>
-                                                                        <option value="ab">Azerbaijani</option>
-                                                                        <option value="aa" >Bashkir</option>
-                                                                        <option value="ab">Basque</option>
-                                                                        <option value="aa" >Bengali(Bangla)</option>
-                                                                        <option value="ab">Bhutani</option>
-                                                                        <option value="aa" >Bihari</option>
-                                                                        <option value="ab">Bislama</option>
-                                                                        <option value="aa" >Breton</option>
-                                                                        <option value="ab">Bulgarian</option>
-                                                                        <option value="aa" >Burmese</option>
-                                                                        <option value="ab">Byelorussian(Belarusian)</option>
-                                                                        <option value="aa" >Catalan</option>
-                                                                        <option value="aa" >Cherokee</option>
-                                                                        <option value="aa" >Chewa</option>
-                                                                        <option value="aa" >Chinese</option>
-                                                                        <option value="aa" >Chinese (Simplified)</option>
-                                                                        <option value="aa" >Chinese (Traditional)</option>
-                                                                        <option value="aa" >Croatian</option>
-                                                                        <option value="aa" >Czech</option>
-                                                                        <option value="aa" >Danish</option>
-                                                                        <option value="aa" >Divehi</option>
-                                                                        <option value="aa" >Dutch</option>
-                                                                        <option value="aa" >Edo</option>
-                                                                        <option value="aa" >English</option>
-                                                                        <option value="aa" >Esperanto</option>
-                                                                        <option value="aa" >Estonian</option>
-                                                                        <option value="aa" >Faeroese</option>
-                                                                        <option value="aa" >Farsi</option>
-                                                                        <option value="aa" >Fiji</option>
-                                                                        <option value="aa" >Finnish</option>
-                                                                        <option value="aa" >Flemish</option>
-                                                                        <option value="aa" >French</option>
-                                                                        <option value="aa" >Frisian</option>
-                                                                        <option value="aa" >Fulfulde</option>
-                                                                        <option value="aa" >Galician</option>
-                                                                        <option value="aa" >Gaelic (Scottish)</option>
-                                                                        <option value="aa" >Gaelic(Manx)</option>
-                                                                        <option value="aa" >Georgian</option>
-                                                                        <option value="aa" >German</option>
-                                                                        <option value="aa" >Greek</option>
-                                                                        <option value="aa" >Greenlandic</option>
-                                                                        <option value="aa" >Guarani</option>
-                                                                        <option value="aa" >Gujarati</option>
-                                                                        <option value="aa" >Haitian Creole</option>
-                                                                        <option value="aa" >Hausa</option>
-                                                                        <option value="aa" >Hawaiian</option>
-                                                                        <option value="aa" >Hebrew</option>
-                                                                        <option value="aa" >Hindi</option>
-                                                                        <option value="aa" >Hungarian</option>
-                                                                        <option value="aa" >Ibibio</option>
-                                                                        <option value="aa" >Icelandic</option>
-                                                                        <option value="aa" >Ido</option>
-                                                                        <option value="aa" >Igbo</option>
-                                                                        <option value="aa" >Indonesian</option>
-                                                                        <option value="aa" >Interlingua</option>
-                                                                        <option value="aa" >Interlingue</option>
-                                                                        <option value="aa" >Inuktitut</option>
-                                                                        <option value="aa" >Inupiak</option>
-                                                                        <option value="aa" >Irish</option>
-                                                                        <option value="aa" >Italian</option>
-                                                                        <option value="aa" >Japanese</option>
-                                                                        <option value="aa" >Javanese</option>
-                                                                        <option value="aa" >Kannada</option>
-                                                                        <option value="aa" >Kanuri</option>
-                                                                        <option value="aa" >Kashmiri</option>
-                                                                        <option value="aa" >Kazakh</option>
-                                                                        <option value="aa" >Kinyarwanda(Ruanda)</option>
-                                                                        <option value="aa" >Kirghiz</option>
-                                                                        <option value="aa" >Kirundi(Rundi)</option>
-                                                                        <option value="aa" >Konkani</option>
-                                                                        <option value="aa" >Korean</option>
-                                                                        <option value="aa" >Kurdish</option>
-                                                                        <option value="aa" >Laothian</option>
-                                                                        <option value="aa" >Latin</option>
-                                                                        <option value="aa" >Latvian (Lettish)</option>
-                                                                        <option value="aa" >Limburgish( Limburger)</option>
-                                                                        <option value="aa" >Lingala</option>
-                                                                        <option value="aa" >Lithuanian</option>
-                                                                        <option value="aa" >Macedonian</option>
-                                                                        <option value="aa" >Malagasy</option>
-                                                                        <option value="aa" >Malay</option>
-                                                                        <option value="aa" >Malayalam</option>
-                                                                        <option value="aa" >Maltese</option>
-                                                                        <option value="aa" >Maori</option>
-                                                                        <option value="aa" >Marathi</option>
-                                                                        <option value="aa" >Moldavian</option>
-                                                                        <option value="aa" >Mongolian</option>
-                                                                        <option value="aa" >Nauru</option>
-                                                                        <option value="aa" >Nepali</option>
-                                                                        <option value="aa" >Norwegian</option>
-                                                                        <option value="aa" >Occitan</option>
-                                                                        <option value="aa" >Oriya</option>
-                                                                        <option value="aa" >Oromo(Afaan Oromo)</option>
-                                                                        <option value="aa" >Papiamentu</option>
-                                                                        <option value="aa" >Pashto(Pushto)</option>
-                                                                        <option value="aa" >Polish</option>
-                                                                        <option value="aa" >Portuguese</option>
-                                                                        <option value="aa" >Punjabi</option>
-                                                                        <option value="aa" >Quechua</option>
-                                                                        <option value="aa" >Rhaeto-Romance</option>
-                                                                        <option value="aa" >Romanian</option>
-                                                                        <option value="aa" >Russian</option>
-                                                                        <option value="aa" >Sami(Lappish)</option>
-                                                                        <option value="aa" >Samoan</option>
-                                                                        <option value="aa" >Sangro</option>
-                                                                        <option value="aa" >Sanskrit</option>
-                                                                        <option value="aa" >Serbian</option>
-                                                                        <option value="aa" >Serbo-Croatian</option>
-                                                                        <option value="aa" >Sesotho</option>
-                                                                        <option value="aa" >Setswana</option>
-                                                                        <option value="aa" >Shona</option>
-                                                                        <option value="aa" >Sichuan Yi</option>
-                                                                        <option value="aa" >Sindhi</option>
-                                                                        <option value="aa" >Sinhalese</option>
-                                                                        <option value="aa" >Siswati</option>
-                                                                        <option value="aa" >Slovak</option>
-                                                                        <option value="aa" >Slovenian</option>
-                                                                        <option value="aa" >Somali</option>
-                                                                        <option value="aa" >Spanish</option>
-                                                                        <option value="aa" >Sundanese</option>
-                                                                        <option value="aa" >Swahili(Kiswahili)</option>
-                                                                        <option value="aa" >Swedish</option>
-                                                                        <option value="aa" >Syriac</option>
-                                                                        <option value="aa" >Tagalog</option>
-                                                                        <option value="aa" >Tajik</option>
-                                                                        <option value="aa" >Tamazight</option>
-                                                                        <option value="aa" >Tamil</option>
-                                                                        <option value="aa" >Tatar</option>
-                                                                        <option value="aa" >Telugu</option>
-                                                                        <option value="aa" >Thai</option>
-                                                                        <option value="aa" >Tibetan</option>
-                                                                        <option value="aa" >Tigrinya</option>
-                                                                        <option value="aa" >Tonga</option>
-                                                                        <option value="aa" >Tsonga</option>
-                                                                        <option value="aa" >Turkish</option>
-                                                                        <option value="aa" >Turkmen</option>
-                                                                        <option value="aa" >Twi</option>
-                                                                        <option value="aa" >Uighur</option>
-                                                                        <option value="aa" >Ukrainian</option>
-                                                                        <option value="aa" >Urdu</option>
-                                                                        <option value="aa" >Uzbek</option>
-                                                                        <option value="aa" >Venda</option>
-                                                                        <option value="aa" >Vietnamese</option>
-                                                                        <option value="aa" >Volapük</option>
-                                                                        <option value="aa" >Wallon</option>
-                                                                        <option value="aa" >Welsh</option>
-                                                                        <option value="aa" >Wolof</option>
-                                                                        <option value="aa" >Xhosa</option>
-                                                                        <option value="aa" >Yi</option>
-                                                                        <option value="aa" >Yiddish</option>
-                                                                        <option value="aa" >Yoruba</option>
-                                                                        <option value="aa" >Zulu</option>
-                                                                    </optgroup>
-
-                                                                </select>
-                                                            </div>
-                                                                </div>
-                                                            <!--End Languages-->
-                                                            <!--Subtitles Languages-->
-                                                            <div class="form-group">
-                                                                <label   class="col-md-2 control-label">Subtitles (Languages):
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <select  id="multiple1" class=" form-control select2-multiple" multiple>
-                                                                        <optgroup label="Subtitles Languages" >
-                                                                            <option value="ab">Abkhazian</option>
-                                                                            <option value="aa" >Afar</option>
-                                                                            <option value="ab">Abkhazian</option>
-                                                                            <option value="af" >Afrikaans</option>
-                                                                            <option value="sq">Albanian</option>
-                                                                            <option value="aa" >Amharic</option>
-                                                                            <option value="am">Abkhazian</option>
-                                                                            <option value="ar" >Arabic</option>
-                                                                            <option value="an">Aragonese</option>
-                                                                            <option value="hy" >Armenian</option>
-                                                                            <option value="ab">Assamese</option>
-                                                                            <option value="aa" >Aymara</option>
-                                                                            <option value="ab">Azerbaijani</option>
-                                                                            <option value="aa" >Bashkir</option>
-                                                                            <option value="ab">Basque</option>
-                                                                            <option value="aa" >Bengali(Bangla)</option>
-                                                                            <option value="ab">Bhutani</option>
-                                                                            <option value="aa" >Bihari</option>
-                                                                            <option value="ab">Bislama</option>
-                                                                            <option value="aa" >Breton</option>
-                                                                            <option value="ab">Bulgarian</option>
-                                                                            <option value="aa" >Burmese</option>
-                                                                            <option value="ab">Byelorussian(Belarusian)</option>
-                                                                            <option value="aa" >Catalan</option>
-                                                                            <option value="aa" >Cherokee</option>
-                                                                            <option value="aa" >Chewa</option>
-                                                                            <option value="aa" >Chinese</option>
-                                                                            <option value="aa" >Chinese (Simplified)</option>
-                                                                            <option value="aa" >Chinese (Traditional)</option>
-                                                                            <option value="aa" >Croatian</option>
-                                                                            <option value="aa" >Czech</option>
-                                                                            <option value="aa" >Danish</option>
-                                                                            <option value="aa" >Divehi</option>
-                                                                            <option value="aa" >Dutch</option>
-                                                                            <option value="aa" >Edo</option>
-                                                                            <option value="aa" >English</option>
-                                                                            <option value="aa" >Esperanto</option>
-                                                                            <option value="aa" >Estonian</option>
-                                                                            <option value="aa" >Faeroese</option>
-                                                                            <option value="aa" >Farsi</option>
-                                                                            <option value="aa" >Fiji</option>
-                                                                            <option value="aa" >Finnish</option>
-                                                                            <option value="aa" >Flemish</option>
-                                                                            <option value="aa" >French</option>
-                                                                            <option value="aa" >Frisian</option>
-                                                                            <option value="aa" >Fulfulde</option>
-                                                                            <option value="aa" >Galician</option>
-                                                                            <option value="aa" >Gaelic (Scottish)</option>
-                                                                            <option value="aa" >Gaelic(Manx)</option>
-                                                                            <option value="aa" >Georgian</option>
-                                                                            <option value="aa" >German</option>
-                                                                            <option value="aa" >Greek</option>
-                                                                            <option value="aa" >Greenlandic</option>
-                                                                            <option value="aa" >Guarani</option>
-                                                                            <option value="aa" >Gujarati</option>
-                                                                            <option value="aa" >Haitian Creole</option>
-                                                                            <option value="aa" >Hausa</option>
-                                                                            <option value="aa" >Hawaiian</option>
-                                                                            <option value="aa" >Hebrew</option>
-                                                                            <option value="aa" >Hindi</option>
-                                                                            <option value="aa" >Hungarian</option>
-                                                                            <option value="aa" >Ibibio</option>
-                                                                            <option value="aa" >Icelandic</option>
-                                                                            <option value="aa" >Ido</option>
-                                                                            <option value="aa" >Igbo</option>
-                                                                            <option value="aa" >Indonesian</option>
-                                                                            <option value="aa" >Interlingua</option>
-                                                                            <option value="aa" >Interlingue</option>
-                                                                            <option value="aa" >Inuktitut</option>
-                                                                            <option value="aa" >Inupiak</option>
-                                                                            <option value="aa" >Irish</option>
-                                                                            <option value="aa" >Italian</option>
-                                                                            <option value="aa" >Japanese</option>
-                                                                            <option value="aa" >Javanese</option>
-                                                                            <option value="aa" >Kannada</option>
-                                                                            <option value="aa" >Kanuri</option>
-                                                                            <option value="aa" >Kashmiri</option>
-                                                                            <option value="aa" >Kazakh</option>
-                                                                            <option value="aa" >Kinyarwanda(Ruanda)</option>
-                                                                            <option value="aa" >Kirghiz</option>
-                                                                            <option value="aa" >Kirundi(Rundi)</option>
-                                                                            <option value="aa" >Konkani</option>
-                                                                            <option value="aa" >Korean</option>
-                                                                            <option value="aa" >Kurdish</option>
-                                                                            <option value="aa" >Laothian</option>
-                                                                            <option value="aa" >Latin</option>
-                                                                            <option value="aa" >Latvian (Lettish)</option>
-                                                                            <option value="aa" >Limburgish( Limburger)</option>
-                                                                            <option value="aa" >Lingala</option>
-                                                                            <option value="aa" >Lithuanian</option>
-                                                                            <option value="aa" >Macedonian</option>
-                                                                            <option value="aa" >Malagasy</option>
-                                                                            <option value="aa" >Malay</option>
-                                                                            <option value="aa" >Malayalam</option>
-                                                                            <option value="aa" >Maltese</option>
-                                                                            <option value="aa" >Maori</option>
-                                                                            <option value="aa" >Marathi</option>
-                                                                            <option value="aa" >Moldavian</option>
-                                                                            <option value="aa" >Mongolian</option>
-                                                                            <option value="aa" >Nauru</option>
-                                                                            <option value="aa" >Nepali</option>
-                                                                            <option value="aa" >Norwegian</option>
-                                                                            <option value="aa" >Occitan</option>
-                                                                            <option value="aa" >Oriya</option>
-                                                                            <option value="aa" >Oromo(Afaan Oromo)</option>
-                                                                            <option value="aa" >Papiamentu</option>
-                                                                            <option value="aa" >Pashto(Pushto)</option>
-                                                                            <option value="aa" >Polish</option>
-                                                                            <option value="aa" >Portuguese</option>
-                                                                            <option value="aa" >Punjabi</option>
-                                                                            <option value="aa" >Quechua</option>
-                                                                            <option value="aa" >Rhaeto-Romance</option>
-                                                                            <option value="aa" >Romanian</option>
-                                                                            <option value="aa" >Russian</option>
-                                                                            <option value="aa" >Sami(Lappish)</option>
-                                                                            <option value="aa" >Samoan</option>
-                                                                            <option value="aa" >Sangro</option>
-                                                                            <option value="aa" >Sanskrit</option>
-                                                                            <option value="aa" >Serbian</option>
-                                                                            <option value="aa" >Serbo-Croatian</option>
-                                                                            <option value="aa" >Sesotho</option>
-                                                                            <option value="aa" >Setswana</option>
-                                                                            <option value="aa" >Shona</option>
-                                                                            <option value="aa" >Sichuan Yi</option>
-                                                                            <option value="aa" >Sindhi</option>
-                                                                            <option value="aa" >Sinhalese</option>
-                                                                            <option value="aa" >Siswati</option>
-                                                                            <option value="aa" >Slovak</option>
-                                                                            <option value="aa" >Slovenian</option>
-                                                                            <option value="aa" >Somali</option>
-                                                                            <option value="aa" >Spanish</option>
-                                                                            <option value="aa" >Sundanese</option>
-                                                                            <option value="aa" >Swahili(Kiswahili)</option>
-                                                                            <option value="aa" >Swedish</option>
-                                                                            <option value="aa" >Syriac</option>
-                                                                            <option value="aa" >Tagalog</option>
-                                                                            <option value="aa" >Tajik</option>
-                                                                            <option value="aa" >Tamazight</option>
-                                                                            <option value="aa" >Tamil</option>
-                                                                            <option value="aa" >Tatar</option>
-                                                                            <option value="aa" >Telugu</option>
-                                                                            <option value="aa" >Thai</option>
-                                                                            <option value="aa" >Tibetan</option>
-                                                                            <option value="aa" >Tigrinya</option>
-                                                                            <option value="aa" >Tonga</option>
-                                                                            <option value="aa" >Tsonga</option>
-                                                                            <option value="aa" >Turkish</option>
-                                                                            <option value="aa" >Turkmen</option>
-                                                                            <option value="aa" >Twi</option>
-                                                                            <option value="aa" >Uighur</option>
-                                                                            <option value="aa" >Ukrainian</option>
-                                                                            <option value="aa" >Urdu</option>
-                                                                            <option value="aa" >Uzbek</option>
-                                                                            <option value="aa" >Venda</option>
-                                                                            <option value="aa" >Vietnamese</option>
-                                                                            <option value="aa" >Volapük</option>
-                                                                            <option value="aa" >Wallon</option>
-                                                                            <option value="aa" >Welsh</option>
-                                                                            <option value="aa" >Wolof</option>
-                                                                            <option value="aa" >Xhosa</option>
-                                                                            <option value="aa" >Yi</option>
-                                                                            <option value="aa" >Yiddish</option>
-                                                                            <option value="aa" >Yoruba</option>
-                                                                            <option value="aa" >Zulu</option>
-                                                                        </optgroup>
-
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <!--End Subtitle Languages-->
-                                                            <!--Duration-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Duration:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="number" class="form-control" name="film[film_duration]" min="0">
-                                                                </div>
-                                                            </div>
-                                                            <!--End Duration-->
-                                                            <!--Country Of Production-->
-                                                            <div class="form-group">
-                                                                <label   class="col-md-2 control-label">Country of Production:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <select  id="multiple2" class=" form-control select2-multiple" multiple>
-                                                                        <optgroup label="Countries" >
-                                                                            <option value="AF">Afghanistan</option>
-                                                                            <option value="AX">Åland Islands</option>
-                                                                            <option value="AL">Albania</option>
-                                                                            <option value="DZ">Algeria</option>
-                                                                            <option value="AS">American Samoa</option>
-                                                                            <option value="AD">Andorra</option>
-                                                                            <option value="AO">Angola</option>
-                                                                            <option value="AI">Anguilla</option>
-                                                                            <option value="AQ">Antarctica</option>
-                                                                            <option value="AG">Antigua and Barbuda</option>
-                                                                            <option value="AR">Argentina</option>
-                                                                            <option value="AM">Armenia</option>
-                                                                            <option value="AW">Aruba</option>
-                                                                            <option value="AU">Australia</option>
-                                                                            <option value="AT">Austria</option>
-                                                                            <option value="AZ">Azerbaijan</option>
-                                                                            <option value="BS">Bahamas</option>
-                                                                            <option value="BH">Bahrain</option>
-                                                                            <option value="BD">Bangladesh</option>
-                                                                            <option value="BB">Barbados</option>
-                                                                            <option value="BY">Belarus</option>
-                                                                            <option value="BE">Belgium</option>
-                                                                            <option value="BZ">Belize</option>
-                                                                            <option value="BJ">Benin</option>
-                                                                            <option value="BM">Bermuda</option>
-                                                                            <option value="BT">Bhutan</option>
-                                                                            <option value="BO">Bolivia, Plurinational State of</option>
-                                                                            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-                                                                            <option value="BA">Bosnia and Herzegovina</option>
-                                                                            <option value="BW">Botswana</option>
-                                                                            <option value="BV">Bouvet Island</option>
-                                                                            <option value="BR">Brazil</option>
-                                                                            <option value="IO">British Indian Ocean Territory</option>
-                                                                            <option value="BN">Brunei Darussalam</option>
-                                                                            <option value="BG">Bulgaria</option>
-                                                                            <option value="BF">Burkina Faso</option>
-                                                                            <option value="BI">Burundi</option>
-                                                                            <option value="KH">Cambodia</option>
-                                                                            <option value="CM">Cameroon</option>
-                                                                            <option value="CA">Canada</option>
-                                                                            <option value="CV">Cape Verde</option>
-                                                                            <option value="KY">Cayman Islands</option>
-                                                                            <option value="CF">Central African Republic</option>
-                                                                            <option value="TD">Chad</option>
-                                                                            <option value="CL">Chile</option>
-                                                                            <option value="CN">China</option>
-                                                                            <option value="CX">Christmas Island</option>
-                                                                            <option value="CC">Cocos (Keeling) Islands</option>
-                                                                            <option value="CO">Colombia</option>
-                                                                            <option value="KM">Comoros</option>
-                                                                            <option value="CG">Congo</option>
-                                                                            <option value="CD">Congo, the Democratic Republic of the</option>
-                                                                            <option value="CK">Cook Islands</option>
-                                                                            <option value="CR">Costa Rica</option>
-                                                                            <option value="CI">Côte d'Ivoire</option>
-                                                                            <option value="HR">Croatia</option>
-                                                                            <option value="CU">Cuba</option>
-                                                                            <option value="CW">Curaçao</option>
-                                                                            <option value="CY">Cyprus</option>
-                                                                            <option value="CZ">Czech Republic</option>
-                                                                            <option value="DK">Denmark</option>
-                                                                            <option value="DJ">Djibouti</option>
-                                                                            <option value="DM">Dominica</option>
-                                                                            <option value="DO">Dominican Republic</option>
-                                                                            <option value="EC">Ecuador</option>
-                                                                            <option value="EG">Egypt</option>
-                                                                            <option value="SV">El Salvador</option>
-                                                                            <option value="GQ">Equatorial Guinea</option>
-                                                                            <option value="ER">Eritrea</option>
-                                                                            <option value="EE">Estonia</option>
-                                                                            <option value="ET">Ethiopia</option>
-                                                                            <option value="FK">Falkland Islands (Malvinas)</option>
-                                                                            <option value="FO">Faroe Islands</option>
-                                                                            <option value="FJ">Fiji</option>
-                                                                            <option value="FI">Finland</option>
-                                                                            <option value="FR">France</option>
-                                                                            <option value="GF">French Guiana</option>
-                                                                            <option value="PF">French Polynesia</option>
-                                                                            <option value="TF">French Southern Territories</option>
-                                                                            <option value="GA">Gabon</option>
-                                                                            <option value="GM">Gambia</option>
-                                                                            <option value="GE">Georgia</option>
-                                                                            <option value="DE">Germany</option>
-                                                                            <option value="GH">Ghana</option>
-                                                                            <option value="GI">Gibraltar</option>
-                                                                            <option value="GR">Greece</option>
-                                                                            <option value="GL">Greenland</option>
-                                                                            <option value="GD">Grenada</option>
-                                                                            <option value="GP">Guadeloupe</option>
-                                                                            <option value="GU">Guam</option>
-                                                                            <option value="GT">Guatemala</option>
-                                                                            <option value="GG">Guernsey</option>
-                                                                            <option value="GN">Guinea</option>
-                                                                            <option value="GW">Guinea-Bissau</option>
-                                                                            <option value="GY">Guyana</option>
-                                                                            <option value="HT">Haiti</option>
-                                                                            <option value="HM">Heard Island and McDonald Islands</option>
-                                                                            <option value="VA">Holy See (Vatican City State)</option>
-                                                                            <option value="HN">Honduras</option>
-                                                                            <option value="HK">Hong Kong</option>
-                                                                            <option value="HU">Hungary</option>
-                                                                            <option value="IS">Iceland</option>
-                                                                            <option value="IN">India</option>
-                                                                            <option value="ID">Indonesia</option>
-                                                                            <option value="IR">Iran, Islamic Republic of</option>
-                                                                            <option value="IQ">Iraq</option>
-                                                                            <option value="IE">Ireland</option>
-                                                                            <option value="IM">Isle of Man</option>
-                                                                            <!--<option value="IL">Israel</option>-->
-                                                                            <option value="IT">Italy</option>
-                                                                            <option value="JM">Jamaica</option>
-                                                                            <option value="JP">Japan</option>
-                                                                            <option value="JE">Jersey</option>
-                                                                            <option value="JO">Jordan</option>
-                                                                            <option value="KZ">Kazakhstan</option>
-                                                                            <option value="KE">Kenya</option>
-                                                                            <option value="KI">Kiribati</option>
-                                                                            <option value="KP">Korea, Democratic People's Republic of</option>
-                                                                            <option value="KR">Korea, Republic of</option>
-                                                                            <option value="KW">Kuwait</option>
-                                                                            <option value="KG">Kyrgyzstan</option>
-                                                                            <option value="LA">Lao People's Democratic Republic</option>
-                                                                            <option value="LV">Latvia</option>
-                                                                            <option value="LB">Lebanon</option>
-                                                                            <option value="LS">Lesotho</option>
-                                                                            <option value="LR">Liberia</option>
-                                                                            <option value="LY">Libya</option>
-                                                                            <option value="LI">Liechtenstein</option>
-                                                                            <option value="LT">Lithuania</option>
-                                                                            <option value="LU">Luxembourg</option>
-                                                                            <option value="MO">Macao</option>
-                                                                            <option value="MK">Macedonia, the former Yugoslav Republic of</option>
-                                                                            <option value="MG">Madagascar</option>
-                                                                            <option value="MW">Malawi</option>
-                                                                            <option value="MY">Malaysia</option>
-                                                                            <option value="MV">Maldives</option>
-                                                                            <option value="ML">Mali</option>
-                                                                            <option value="MT">Malta</option>
-                                                                            <option value="MH">Marshall Islands</option>
-                                                                            <option value="MQ">Martinique</option>
-                                                                            <option value="MR">Mauritania</option>
-                                                                            <option value="MU">Mauritius</option>
-                                                                            <option value="YT">Mayotte</option>
-                                                                            <option value="MX">Mexico</option>
-                                                                            <option value="FM">Micronesia, Federated States of</option>
-                                                                            <option value="MD">Moldova, Republic of</option>
-                                                                            <option value="MC">Monaco</option>
-                                                                            <option value="MN">Mongolia</option>
-                                                                            <option value="ME">Montenegro</option>
-                                                                            <option value="MS">Montserrat</option>
-                                                                            <option value="MA">Morocco</option>
-                                                                            <option value="MZ">Mozambique</option>
-                                                                            <option value="MM">Myanmar</option>
-                                                                            <option value="NA">Namibia</option>
-                                                                            <option value="NR">Nauru</option>
-                                                                            <option value="NP">Nepal</option>
-                                                                            <option value="NL">Netherlands</option>
-                                                                            <option value="NC">New Caledonia</option>
-                                                                            <option value="NZ">New Zealand</option>
-                                                                            <option value="NI">Nicaragua</option>
-                                                                            <option value="NE">Niger</option>
-                                                                            <option value="NG">Nigeria</option>
-                                                                            <option value="NU">Niue</option>
-                                                                            <option value="NF">Norfolk Island</option>
-                                                                            <option value="MP">Northern Mariana Islands</option>
-                                                                            <option value="NO">Norway</option>
-                                                                            <option value="OM">Oman</option>
-                                                                            <option value="PK">Pakistan</option>
-                                                                            <option value="PW">Palau</option>
-                                                                            <option value="PS">Palestinian Territory, Occupied</option>
-                                                                            <option value="PA">Panama</option>
-                                                                            <option value="PG">Papua New Guinea</option>
-                                                                            <option value="PY">Paraguay</option>
-                                                                            <option value="PE">Peru</option>
-                                                                            <option value="PH">Philippines</option>
-                                                                            <option value="PN">Pitcairn</option>
-                                                                            <option value="PL">Poland</option>
-                                                                            <option value="PT">Portugal</option>
-                                                                            <option value="PR">Puerto Rico</option>
-                                                                            <option value="QA">Qatar</option>
-                                                                            <option value="RE">Réunion</option>
-                                                                            <option value="RO">Romania</option>
-                                                                            <option value="RU">Russian Federation</option>
-                                                                            <option value="RW">Rwanda</option>
-                                                                            <option value="BL">Saint Barthélemy</option>
-                                                                            <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
-                                                                            <option value="KN">Saint Kitts and Nevis</option>
-                                                                            <option value="LC">Saint Lucia</option>
-                                                                            <option value="MF">Saint Martin (French part)</option>
-                                                                            <option value="PM">Saint Pierre and Miquelon</option>
-                                                                            <option value="VC">Saint Vincent and the Grenadines</option>
-                                                                            <option value="WS">Samoa</option>
-                                                                            <option value="SM">San Marino</option>
-                                                                            <option value="ST">Sao Tome and Principe</option>
-                                                                            <option value="SA">Saudi Arabia</option>
-                                                                            <option value="SN">Senegal</option>
-                                                                            <option value="RS">Serbia</option>
-                                                                            <option value="SC">Seychelles</option>
-                                                                            <option value="SL">Sierra Leone</option>
-                                                                            <option value="SG">Singapore</option>
-                                                                            <option value="SX">Sint Maarten (Dutch part)</option>
-                                                                            <option value="SK">Slovakia</option>
-                                                                            <option value="SI">Slovenia</option>
-                                                                            <option value="SB">Solomon Islands</option>
-                                                                            <option value="SO">Somalia</option>
-                                                                            <option value="ZA">South Africa</option>
-                                                                            <option value="GS">South Georgia and the South Sandwich Islands</option>
-                                                                            <option value="SS">South Sudan</option>
-                                                                            <option value="ES">Spain</option>
-                                                                            <option value="LK">Sri Lanka</option>
-                                                                            <option value="SD">Sudan</option>
-                                                                            <option value="SR">Suriname</option>
-                                                                            <option value="SJ">Svalbard and Jan Mayen</option>
-                                                                            <option value="SZ">Swaziland</option>
-                                                                            <option value="SE">Sweden</option>
-                                                                            <option value="CH">Switzerland</option>
-                                                                            <option value="SY">Syrian Arab Republic</option>
-                                                                            <option value="TW">Taiwan, Province of China</option>
-                                                                            <option value="TJ">Tajikistan</option>
-                                                                            <option value="TZ">Tanzania, United Republic of</option>
-                                                                            <option value="TH">Thailand</option>
-                                                                            <option value="TL">Timor-Leste</option>
-                                                                            <option value="TG">Togo</option>
-                                                                            <option value="TK">Tokelau</option>
-                                                                            <option value="TO">Tonga</option>
-                                                                            <option value="TT">Trinidad and Tobago</option>
-                                                                            <option value="TN">Tunisia</option>
-                                                                            <option value="TR">Turkey</option>
-                                                                            <option value="TM">Turkmenistan</option>
-                                                                            <option value="TC">Turks and Caicos Islands</option>
-                                                                            <option value="TV">Tuvalu</option>
-                                                                            <option value="UG">Uganda</option>
-                                                                            <option value="UA">Ukraine</option>
-                                                                            <option value="AE">United Arab Emirates</option>
-                                                                            <option value="GB">United Kingdom</option>
-                                                                            <option value="US">United States</option>
-                                                                            <option value="UM">United States Minor Outlying Islands</option>
-                                                                            <option value="UY">Uruguay</option>
-                                                                            <option value="UZ">Uzbekistan</option>
-                                                                            <option value="VU">Vanuatu</option>
-                                                                            <option value="VE">Venezuela, Bolivarian Republic of</option>
-                                                                            <option value="VN">Viet Nam</option>
-                                                                            <option value="VG">Virgin Islands, British</option>
-                                                                            <option value="VI">Virgin Islands, U.S.</option>
-                                                                            <option value="WF">Wallis and Futuna</option>
-                                                                            <option value="EH">Western Sahara</option>
-                                                                            <option value="YE">Yemen</option>
-                                                                            <option value="ZM">Zambia</option>
-                                                                            <option value="ZW">Zimbabwe</option>
-
-                                                                        </optgroup>
-
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <!--End Country of Production-->
-
-                                                            <!--Categories-->
-                                                            <div class="form-group">
-                                                                <label   class="col-md-2 control-label">Categories:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <select  id="multiple3" class=" form-control select2-multiple" multiple>
-                                                                        <optgroup label="Select Categories" >
-                                                                            <option value="animation">Animation</option>
-                                                                            <option value="documentary">Documentary</option>
-                                                                            <option value="experimental">Experimental</option>
-                                                                            <option value="fantastic">Fantastic</option>
-                                                                            <option value="fiction">Fiction</option>
-                                                                            <option value="music_video">Music Video</option>
-                                                                            <option value="other">Other</option>
-                                                                            <option value="terror">Terror</option>
-                                                                        </optgroup>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                            <!--End Categories-->
-                                                            <!--Theme-->
-                                                            <div class="form-group">
-                                                                <label   class="col-md-2 control-label">Themes:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <select  id="multiple4" class=" form-control select2-multiple" multiple>
-                                                                        <optgroup label="Select Themes" >
-                                                                            <option value="adolescence">Adolescence</option>
-                                                                            <option value="alcohol">Alcohol</option>
-                                                                            <option value="ancient">Ancient</option>
-                                                                            <option value="animals">Animals</option>
-                                                                            <option value="childhood">Childhood</option>
-                                                                            <option value="cinema_beur">Cinema Beur</option>
-                                                                            <option value="cinema_verite">Cinema Verite</option>
-                                                                            <option value="circus">Circus</option>
-                                                                            <option value="country_life">Country Life</option>
-                                                                            <option value="culture">Culture</option>
-                                                                            <option value="dance">Dance</option>
-                                                                            <option value="death">Death</option>
-                                                                            <option value="diary">Diary</option>
-                                                                            <option value="direct_cinema">Direct Cinema</option>
-                                                                            <option value="disability">Disability</option>
-                                                                            <option value="dream">Dream</option>
-                                                                            <option value="drugs">Drugs</option>
-                                                                            <option value="eat_drink">Eat/Drink</option>
-                                                                            <option value="ecology">Ecology</option>
-                                                                            <option value="emigration_inmigration">Emigration/Inmigration</option>
-                                                                            <option value="employment">Employment</option>
-                                                                            <option value="eroticism">Eroticism</option>
-                                                                            <option value="family">Family</option>
-                                                                            <option value="hate">Hate</option>
-                                                                            <option value="historical">Historical</option>
-                                                                            <option value="homosexuality">Homosexuality</option>
-                                                                            <option value="humour">Humour</option>
-                                                                            <option value="indian">Indian</option>
-                                                                            <option value="journey">Journey</option>
-                                                                            <option value="loneliness">Loneliness</option>
-                                                                            <option value="love">Love</option>
-                                                                            <option value="macabre">Macabre</option>
-                                                                            <option value="mafia">Mafia</option>
-                                                                            <option value="music">Music</option>
-                                                                            <option value="nature">Nature</option>
-                                                                            <option value="other">Other</option>
-                                                                            <option value="policial">Policial</option>
-                                                                            <option value="politics">Politics</option>
-                                                                            <option value="poverty">Poverty</option>
-                                                                            <option value="prison">Prison</option>
-                                                                            <option value="queer_cinema">Queer Cinema</option>
-                                                                            <option value="racism">Racism</option>
-                                                                            <option value="relationship">Relationship</option>
-                                                                            <option value="religion">Religion</option>
-                                                                            <option value="revenge">Revenge</option>
-                                                                            <option value="school">School</option>
-                                                                            <option value="sexuality">Sexuality</option>
-                                                                            <option value="sports">Sports</option>
-                                                                            <option value="terrorism">Terrorism</option>
-                                                                            <option value="thievery">Thievery</option>
-                                                                            <option value="violence">Violence</option>
-                                                                            <option value="war">War</option>
-
-                                                                        </optgroup>
-
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <!--End Theme-->
-
-                                                            <!--Genres-->
-                                                            <div class="form-group">
-                                                                <label   class="col-md-2 control-label">Genres:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <select  id="multiple5" class=" form-control select2-multiple" multiple>
-                                                                        <optgroup label="Select Genres" >
-                                                                            <option value="action">Action</option>
-                                                                            <option value="adventure">Adventure</option>
-                                                                            <option value="art">Art</option>
-                                                                            <option value="catastrophe">Catastrophe</option>
-                                                                            <option value="children">Children</option>
-                                                                            <option value="choreography">Choreography</option>
-                                                                            <option value="comedy">Comedy</option>
-                                                                            <option value="crime">Crime</option>
-                                                                            <option value="dance">Dance</option>
-                                                                            <option value="drama">Drama</option>
-                                                                            <option value="eroticism">Eroticism</option>
-                                                                            <option value="fantasy">Fantasy</option>
-                                                                            <option value="film_noir">Film Noir</option>
-                                                                            <option value="historical">Historical</option>
-                                                                            <option value="horror">Horror</option>
-                                                                            <option value="human_rights">Human Rights</option>
-                                                                            <option value="melodrama">Melodrama</option>
-                                                                            <option value="mockumentary">Mockumentary</option>
-                                                                            <option value="musical">Musical</option>
-                                                                            <option value="other">Other</option>
-                                                                            <option value="portrait">Portrait</option>
-                                                                            <option value="psychological">Psychological</option>
-                                                                            <option value="reality_recorder">Reality Recorder</option>
-                                                                            <option value="road_movie">Road Movie</option>
-                                                                            <option value="romantic">Romantic</option>
-                                                                            <option value="science_fiction">Science Fiction</option>
-                                                                            <option value="sexual">Sexual</option>
-                                                                            <option value="silent_mMovie">Silent Movie</option>
-                                                                            <option value="sports">Sports</option>
-                                                                            <option value="teen_movie">Teen Movie</option>
-                                                                            <option value="thriller">Thriller</option>
-                                                                            <option value="video_art">Video Art</option>
-                                                                            <option value="war_movie">War Movie</option>
-                                                                            <option value="western">Western</option>
-                                                                            <option value="wildlife_movie">Wildlife Movie</option>
-                                                                        </optgroup>
-
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <!--End Genres-->
-
-                                                            <!--Film School-->
-                                                            <div class="form-body">
-                                                                <div class="form-group">
-                                                                    <label class="col-md-2 control-label">Film School:
-                                                                        <!--<span class="required"> * </span>-->
-                                                                    </label>
-                                                                    <div class="col-md-10">
-                                                                        <input type="text" class="form-control" name="film[film_school]" placeholder="">
-                                                                    </div>
-
-                                                                    <div class="col-md-2">
-
-                                                                    </div>
-
-                                                                    <div class="col-md-10">
-                                                                    <div class="mt-checkbox-list">
-                                                                        <label class="mt-checkbox"> Film School
-                                                                            <input type="checkbox" value="1" name="film_school" />
-                                                                            <span></span>
-                                                                        </label>
-                                                                        <label class="mt-checkbox"> Debut Film
-                                                                            <input type="checkbox" value="1" name="debut_film" />
-                                                                            <span></span>
-                                                                        </label>
-                                                                        <label class="mt-checkbox"> Work in Progress
-                                                                            <input type="checkbox" value="1" name="work_in_progress" />
-                                                                            <span></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-
-
-
-
-
-                                                            <!--End Film School-->
-
-                                                            <!--Short Synopsis-->
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Short Synopsis:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <textarea class="short-text-area form-control" rows="3"></textarea>
-                                                                    <span id="chars">250</span> characters remaining
-                                                                </div>
-                                                            </div>
-
-                                                            <!--End Short Synopsis-->
-
-                                                            <!--Long Synopsis-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Long Synopsis:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <textarea class="long-text-area-a form-control" rows="5"></textarea>
-                                                                    <span id="chars_a">0</span> characters
-                                                                </div>
-                                                            </div>
-                                                            <!--End Long Synopsis-->
-
-                                                            <!--Short Synopsis English-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Short Synopsis (English):
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <textarea class="short-text-area1 form-control" rows="3"></textarea>
-                                                                    <span id="chars1">250</span> characters remaining
-                                                                </div>
-                                                            </div>
-                                                            <!--End Short Synopsis English-->
-
-                                                            <!--Long Synopsis English-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Long Synopsis (English):
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <textarea class="long-text-area-b form-control" rows="5"></textarea>
-                                                                    <span id="chars_b">0</span> characters
-                                                                </div>
-                                                            </div>
-                                                            <!--End Long Synopsis English-->
-                                                            <!--Film Link-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Film Link:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[film_link]" placeholder="link to vimeo or youtube">
-                                                                    </div>
-                                                            </div>
-                                                            <!--End Film Link-->
-                                                            <!--Film Password-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Film Password:
-<!--                                                                    <span class="required"> * </span>-->
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[film_password]" placeholder="">
-                                                                    </div>
-                                                            </div>
-                                                            <!--End Film Password-->
-                                                           
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="tab_prod">
-                                                        <!--Message-->
-                                                        <div class="alert alert-success margin-bottom-10">
-                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                                                            <i class="fa fa-warning fa-lg"></i> Add your film crew. The director and producer will be highlighted specially to the festival.
-                                                        </div>
-                                                        <!--End Message-->
-
-                                                        <!-- Director/Producer -->
-
-                                                        <div class="row dir-prod">
-                                                            <div class="col-md-6">
-                                                                <div class="col-md-12">
-                                                                    <a type="button" class=" btn orange-default btn-outline sbold" data-toggle="modal" data-target="#adddir" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Director </a>
-
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <h4>DIRECTOR:</h4>
-                                                                </div>
-                                                                <div class="col-md-12" id="adddirdis" style="display: none;">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-btn">
-                                                                            <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                <i class="fa fa-angle-down"></i> 
-                                                                            </button>
-                                                                            <ul class="dropdown-menu">
-
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-edit"></i> Edit</a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-remove"></i> Delete </a>
-                                                                                </li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <!-- /btn-group -->
-                                                                        <input type="text" id="adddirrec" value="" class="form-control" readonly> </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="col-md-12">
-                                                                    <a type="button" class=" btn orange-default btn-outline sbold"  data-toggle="modal" data-target="#addprod" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Producer </a>
-
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <h4>PRODUCER:</h4>
-                                                                </div>
-                                                                <div class="col-md-12"  id="addproddis" style="display: none;">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-btn">
-                                                                            <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                <i class="fa fa-angle-down"></i>
-                                                                            </button>
-                                                                            <ul class="dropdown-menu">
-
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-edit"></i> Edit</a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-remove"></i> Delete </a>
-                                                                                </li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <!-- /btn-group -->
-                                                                        <input type="text" id="addprodrec" value=""  class="form-control" readonly> </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!--End Director/Producer -->
-                                                        <hr>
-                                                        <!-- Distribution/Production company-->
-                                                        <div class="row dist-prod">
-                                                            <div class="col-md-6">
-                                                                <div class="col-md-12">
-                                                                    <a type="button" class=" btn orange-default btn-outline sbold"  data-toggle="modal" data-target="#adddist" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Distribution Company </a>
-
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <h4>DISTRIBUTION COMPANY:</h4>
-                                                                </div>
-                                                                <div class="col-md-12" id="adddistdis" style="display: none;">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-btn">
-                                                                            <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                <i class="fa fa-angle-down"></i>
-                                                                            </button>
-                                                                            <ul class="dropdown-menu">
-
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-edit"></i> Edit</a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-remove"></i> Delete </a>
-                                                                                </li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <!-- /btn-group -->
-                                                                        <input type="text" id="adddistrec" value=""  class="form-control" readonly> </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="col-md-12">
-                                                                    <a type="button" class=" btn orange-default btn-outline sbold"  data-toggle="modal" data-target="#addproduct" data-whatever="@mdo"> <i class="fa fa-plus-circle"></i> Add Production Company </a>
-
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <h4>PRODUCTION COMPANY:</h4>
-                                                                </div>
-                                                                <div class="col-md-12" id="addproductdis" style="display: none;">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-btn">
-                                                                            <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                <i class="fa fa-angle-down"></i>
-                                                                            </button>
-                                                                            <ul class="dropdown-menu">
-
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-edit"></i> Edit</a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="javascript:;"><i class="fa fa-remove"></i> Delete </a>
-                                                                                </li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <!-- /btn-group -->
-                                                                        <input type="text" id="addproductrec" value=""  class="form-control" readonly>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div><!--End Distribution/Production company-->
-
-                                                        <hr>
-                                                        <!--Remaining Crew-->
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <h4>TECHNICAL & ARTISTIC TEAM: </h4>
-                                                            </div>
-                                                            <div class="col-md-12 margin-10">
-                                                                <div class="col-md-4">
-                                                                    <input type="text" class="form-control" name="" placeholder="First Name">
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <input type="text" class="form-control" name="" placeholder="Last Name">
-
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <select  id="multiple6" class=" form-control select2-multiple" >
-
-
-                                                                            <option value="art_director">Art Director</option>
-                                                                            <option value="costume_designer">Costume Designer</option>
-                                                                            <option value="dop">D.O.P </option>
-                                                                            <option value="editor">Editor</option>
-                                                                            <option value="executive_producer">Executive Producer</option>
-                                                                            <option value="graphic_designer">Graphic Designer</option>
-                                                                            <option value="lead_actor">Lead Actor</option>
-                                                                            <option value="lead_actress">Lead Actress</option>
-                                                                            <option value="music_composer">Music Composer</option>
-                                                                            <option value="sound_designer">Sound Designer</option>
-                                                                            <option value="sound_mixer">Sound Mixer</option>
-                                                                            <option value="vfx">V.F.X</option>
-                                                                            <option value="writer">Writer</option>
-
-
-
-
-
-
-
-
-                                                                        </select>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-12 margin-10">
-                                                                <div class="col-md-4"></div>
-                                                                <div class="col-md-4"></div>
-                                                                <div class="col-md-2"></div>
-                                                                <div class="col-md-2">
-                                                                    <a class=" btn orange-default btn-outline sbold pull-right" href="" data-target="#ajax" data-toggle=""> <i class="fa fa-plus-circle"></i> Add Member </a>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12 margin-10">
-                                                                <div class="col-md-3"></div>
-                                                                <div class="col-md-6">
-                                                                    <div class="col-md-12 margin-10">
-                                                                        <div class="input-group">
-                                                                            <div class="input-group-btn">
-                                                                                <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu">
-
-                                                                                    <li>
-                                                                                        <a href="javascript:;"><i class="fa fa-edit"></i> Edit</a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;"><i class="fa fa-remove"></i> Delete </a>
-                                                                                    </li>
-
-                                                                                </ul>
-                                                                            </div>
-                                                                            <!-- /btn-group -->
-                                                                            <input type="text" class="form-control" readonly>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-12 margin-10">
-                                                                        <div class="input-group">
-                                                                            <div class="input-group-btn">
-                                                                                <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu">
-
-                                                                                    <li>
-                                                                                        <a href="javascript:;"><i class="fa fa-edit"></i> Edit</a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;"><i class="fa fa-remove"></i> Delete </a>
-                                                                                    </li>
-
-                                                                                </ul>
-                                                                            </div>
-                                                                            <!-- /btn-group -->
-                                                                            <input type="text" class="form-control" readonly>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-12 ">
-                                                                        <div class="input-group">
-                                                                            <div class="input-group-btn">
-                                                                                <button type="button" class="btn orange-default dropdown-toggle" data-toggle="dropdown">Edit or Delete
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu">
-
-                                                                                    <li>
-                                                                                        <a href="javascript:;"><i class="fa fa-edit"></i> Edit</a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;"><i class="fa fa-remove"></i> Delete </a>
-                                                                                    </li>
-
-                                                                                </ul>
-                                                                            </div>
-                                                                            <!-- /btn-group -->
-                                                                            <input type="text" class="form-control" readonly>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3"></div>
-                                                            </div>
-                                                        </div>
-                                                        <!--End Remaining Crew-->
-
-                                                    </div>
-                                                    <div class="tab-pane" id="tab_film_materials">
-                                                           <div class="form-body">
-                                                         <!--Film Poster-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Film's Poster:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                   <div class="input-group">
-                                                                            <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                            </label>
-                                                                            <input type="text" class="form-control" readonly>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--End Film Poster-->
-                                                            <!--Film Still-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Film's Still:
-                                                                    <span class="required"> * </span>
-                                                                </label>
-                                                                <div class="col-md-10 margin-20">
-                                                                   <div class="input-group">
-                                                                            <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                            </label>
-                                                                            <input type="text" class="form-control" readonly>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-2"></div>
-                                                                <div class="col-md-10 margin-20">
-                                                                    <div class="input-group">
-                                                                        <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                        </label>
-                                                                        <input type="text" class="form-control" readonly>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2"></div>
-                                                                <div class="col-md-10 margin-20">
-                                                                    <div class="input-group">
-                                                                        <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                        </label>
-                                                                        <input type="text" class="form-control" readonly>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2"></div>
-                                                                <div class="col-md-10 margin-20">
-                                                                    <div class="input-group">
-                                                                        <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                        </label>
-                                                                        <input type="text" class="form-control" readonly>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--End Film Still-->
-                                                               <!--Director Photo-->
-                                                               <div class="form-group">
-                                                                   <label class="col-md-2 control-label">Director Photo:
-                                                                       <span class="required"> * </span>
-                                                                   </label>
-                                                                   <div class="col-md-10">
-                                                                       <div class="input-group">
-                                                                           <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                           </label>
-                                                                           <input type="text" class="form-control" readonly>
-                                                                       </div>
-                                                                   </div>
-                                                               </div>
-                                                               <!--End Director Photo-->
-                                                               <!--Dialogue List -->
-                                                               <div class="form-group">
-                                                                   <label class="col-md-2 control-label">Dialogue List :
-                                                                       <span class="required"> * </span>
-                                                                   </label>
-                                                                   <div class="col-md-10">
-                                                                       <div class="input-group">
-                                                                           <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                           </label>
-                                                                           <input type="text" class="form-control" readonly>
-                                                                       </div>
-                                                                   </div>
-                                                               </div>
-                                                               <!--End Dialogue List -->
-                                                               <!--Press Kit -->
-                                                               <div class="form-group">
-                                                                   <label class="col-md-2 control-label">Press Kit :
-                                                                       <span class="required"> * </span>
-                                                                   </label>
-                                                                   <div class="col-md-10">
-                                                                       <div class="input-group">
-                                                                           <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                           </label>
-                                                                           <input type="text" class="form-control" readonly>
-                                                                       </div>
-                                                                   </div>
-                                                               </div>
-                                                               <!--End Press Kit -->
-                                                               <!--Other Material-->
-                                                               <div class="form-group">
-                                                                   <label class="col-md-2 control-label">Other Material:
-                                                                       <!--<span class="required"> * </span>-->
-                                                                   </label>
-                                                                   <div class="col-md-10">
-                                                                       <div class="input-group">
-                                                                           <label class="input-group-btn">
-                                                                                <span class="btn btn-primary">
-                                                                                    Browse&hellip; <input type="file" style="display: none;" >
-                                                                                </span>
-                                                                           </label>
-                                                                           <input type="text" class="form-control" readonly>
-                                                                       </div>
-                                                                   </div>
-                                                               </div>
-                                                               <!--End Other Material-->
-                                                               <hr>
-                                                               <label class="col-md-2 control-label">Subtitles:
-                                                                   <!--<span class="required"> * </span>-->
-                                                               </label>
-                                                               <form id="fileupload" action="http://keenthemes.com/preview/metronic/theme/assets/global/plugins/jquery-file-upload/server/php/" method="POST" enctype="multipart/form-data">
-                                                                   <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-                                                                   <div class="row fileupload-buttonbar">
-                                                                       <div class="col-lg-7">
-                                                                           <!-- The fileinput-button span is used to style the file input field as button -->
-                                                                           <span class="btn green fileinput-button">
-                                                <i class="fa fa-plus"></i>
-                                                <span> Add files... </span>
-                                                <input type="file" name="files[]" multiple=""> </span>
-                                                                           <button type="submit" class="btn blue start">
-                                                                               <i class="fa fa-upload"></i>
-                                                                               <span> Start upload </span>
-                                                                           </button>
-                                                                           <button type="reset" class="btn warning cancel">
-                                                                               <i class="fa fa-ban-circle"></i>
-                                                                               <span> Cancel upload </span>
-                                                                           </button>
-                                                                           <button type="button" class="btn red delete">
-                                                                               <i class="fa fa-trash"></i>
-                                                                               <span> Delete </span>
-                                                                           </button>
-                                                                           <input type="checkbox" class="toggle">
-                                                                           <!-- The global file processing state -->
-                                                                           <span class="fileupload-process"> </span>
-                                                                       </div>
-                                                                       <!-- The global progress information -->
-                                                                       <div class="col-lg-5 fileupload-progress fade">
-                                                                           <!-- The global progress bar -->
-                                                                           <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                                                               <div class="progress-bar progress-bar-success" style="width:0%;"> </div>
-                                                                           </div>
-                                                                           <!-- The extended global progress information -->
-                                                                           <div class="progress-extended"> &nbsp; </div>
-                                                                       </div>
-                                                                   </div>
-                                                                   <!-- The table listing the files available for upload/download -->
-                                                                   <table role="presentation" class="table table-striped clearfix">
-                                                                       <tbody class="files"> </tbody>
-                                                                   </table>
-                                                               </form>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="tab_promotion">
-                                                        <!--Website URL-->
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Website URL:
-                                                                    <!--<span class="required"> * </span>-->
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[website_url]" placeholder=""> </div>
-                                                            </div>
-                                                            <!--End Website URL-->
-                                                            <!--Facebook Link-->
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Facebook Link:
-                                                                    <!--<span class="required"> * </span>-->
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[facebook_link]" placeholder=""> </div>
-                                                            </div>
-                                                            <!--End Facebook Link-->
-                                                            <!--Twitter Link-->
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Twitter Link:
-                                                                    <!--<span class="required"> * </span>-->
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[twitter_link]" placeholder=""> </div>
-                                                            </div>
-                                                            <!--End Twitter Link-->
-                                                                <!--Instagram Link-->
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Instagram Link:
-                                                                    <!--<span class="required"> * </span>-->
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <input type="text" class="form-control" name="film[instagram_link]" placeholder=""> </div>
-                                                            </div>
-                                                            <!--End Instagram Link-->
-
-                                                            <!--IMDB Link-->
-                                                            <div class="form-body">
-                                                                <div class="form-group">
-                                                                    <label class="col-md-2 control-label">IMDB Link:
-                                                                        <!--<span class="required"> * </span>-->
-                                                                    </label>
-                                                                    <div class="col-md-10">
-                                                                        <input type="text" class="form-control" name="film[imdb_link]" placeholder=""> </div>
-                                                                </div>
-                                                                <!--End IMDB Link-->
-                                                                <!--Trailer Link-->
-                                                                <div class="form-body">
-                                                                    <div class="form-group">
-                                                                        <label class="col-md-2 control-label">Trailer Link:
-                                                                            <!--<span class="required"> * </span>-->
-                                                                        </label>
-                                                                        <div class="col-md-10">
-                                                                            <input type="text" class="form-control" name="film[facebook_link]" placeholder=""> </div>
-                                                                    </div>
-                                                                    <!--End Trailer Link-->
-
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="tab-pane" id="tab_awards">
-                                                        <!--Awards-->
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Awards:
-                                                                    <!--<span class="required"> * </span>-->
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <textarea rows="5" class="form-control" name="film[awards]" placeholder="">
-                                                                    </textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div> <!--End Awards -->
-                                                        <!--Selections-->
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-2 control-label">Selections:
-                                                                    <!--<span class="required"> * </span>-->
-                                                                </label>
-                                                                <div class="col-md-10">
-                                                                    <textarea rows="5" class="form-control" name="film[selections]" placeholder="">
-                                                                    </textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-horizontal form-row-seperated" action="#">
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-film"></i>Create Film </div>
+                            <div class="actions btn-set">
+                                <button type="button" name="back" class="btn btn-secondary-outline">
+                                    <i class="fa fa-angle-left"></i> Back</button>
+                                <button class="btn btn-secondary-outline">
+                                    <i class="fa fa-reply"></i> Reset</button>
+                                <button class="btn btn-success">
+                                    <i class="fa fa-check"></i> Save</button>
+                                <button class="btn btn-success">
+                                    <i class="fa fa-check-circle"></i> Save & Continue Edit</button>
+                                <div class="btn-group">
+                                    <a class="btn btn-success dropdown-toggle" href="javascript:;" data-toggle="dropdown">
+                                        <i class="fa fa-share"></i> More
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;"> Duplicate </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"> Delete </a>
+                                        </li>
+                                        <li class="dropdown-divider"> </li>
+                                        <li>
+                                            <a href="javascript:;"> Print </a>
+                                        </li>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
+                        <div class="portlet-body">
+                            <div class="tabbable-bordered">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#tab_general" data-toggle="tab"> General </a>
+                                    </li>
+                                    <!--<li>-->
+                                        <!--<a href="#tab_prod" data-toggle="tab"> Production & Credits </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#tab_film_materials" data-toggle="tab"> Film Materials </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#tab_promotion" data-toggle="tab"> Promotion-->
+                                            <!--&lt;!&ndash;<span class="badge badge-success"> 3 </span>&ndash;&gt;-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+
+                                    <li>
+                                        <a href="#tab_awards" data-toggle="tab"> Selections & Awards </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_general">
+                                                        <!--Editon Number-->
+                                                        <div class="form-body">
+                                                            <div class="form-group">
+                                                                <label class="col-md-2 control-label">Edition Number
+                                                                <span class="required">*</span>
+                                                            </label>
+                                                                <div class="col-md-10">
+                                                                <input type="text" class="form-control" name="edition_number" placeholder="" >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    <!--End Edition Number-->
+                                                    <!--Edition Year-->
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <label class="col-md-2 control-label">Edition Year
+                                                                <span class="required">*</span>
+                                                            </label>
+                                                            <div class="col-md-10">
+                                                                <input type="text" class="form-control" name="edition_year" placeholder="" >
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                    </div>
+
+
+
+                                                    <!--End Edition Year-->
+                                                <div class="tab-pane " id="tab_awards">
+                                                    <!--Awards-->
+                                                    <div class="form-body">
+                                                                <div class="form-group">
+                                                                    <label class="col-md-2 control-label">Awards:
+                                                                        <!--<span class="required"> * </span>-->
+                                                                    </label>
+                                                                        <div class="col-md-10">
+                                                                            <textarea rows="5" class="form-control" name="film[awards]" placeholder="">
+                                                                            </textarea>
+                                                                </div>
+
+                                                            </div> <!--End Awards -->
+
+                                                    </div>
+                                                    <!--Selections-->
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <label class="col-md-2 control-label">Selections:
+                                                                <!--<span class="required"> * </span>-->
+                                                            </label>
+                                                            <div class="col-md-10">
+                                                                    <textarea rows="5" class="form-control" name="film[selections]" placeholder="">
+                                                                    </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
     </div>
 </section>
 <!--Bottom Section-->
@@ -1703,163 +286,163 @@
 <!-- add modals -->
 
     <!-- add director modal -->
-    <div class="modal fade" id="adddir" tabindex="-1" role="dialog" aria-labelledby="adddirLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="adddirLabel">Add Director</h4>
-          </div>
-          <div class="modal-body">
-            <form id="adddirform">
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Director Name:</label>
-                <input type="text" class="form-control" id="adddirinput" placeholder="Soliman Mahmoud" required>
-              </div>
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Director Email:</label>
-                <input type="email" class="form-control" placeholder="Example@Example.com"  required>
-              </div>
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Director Phone:</label>
-                <input type="tel" class="form-control" placeholder="00201013754233"  required>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
-            <button type="submit" form="adddirform" id="adddirsubmit" class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Director</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end add director modal -->
+    <!--<div class="modal fade" id="adddir" tabindex="-1" role="dialog" aria-labelledby="adddirLabel">-->
+      <!--<div class="modal-dialog" role="document">-->
+        <!--<div class="modal-content">-->
+          <!--<div class="modal-header">-->
+            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+            <!--<h4 class="modal-title" id="adddirLabel">Add Director</h4>-->
+          <!--</div>-->
+          <!--<div class="modal-body">-->
+            <!--<form id="adddirform">-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Director Name:</label>-->
+                <!--<input type="text" class="form-control" id="adddirinput" placeholder="Soliman Mahmoud" required>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Director Email:</label>-->
+                <!--<input type="email" class="form-control" placeholder="Example@Example.com"  required>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Director Phone:</label>-->
+                <!--<input type="tel" class="form-control" placeholder="00201013754233"  required>-->
+              <!--</div>-->
+            <!--</form>-->
+          <!--</div>-->
+          <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>-->
+            <!--<button type="submit" form="adddirform" id="adddirsubmit" class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Director</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; end add director modal &ndash;&gt;-->
 
-    <!-- add producer modal -->
-    <div class="modal fade" id="addprod" tabindex="-1" role="dialog" aria-labelledby="addprodLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="addprodLabel">Add Producer</h4>
-          </div>
-          <div class="modal-body">
-            <form id="addprodform">
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Producer Name:</label>
-                <input type="text" class="form-control" id="addprodinput" required>
-              </div>
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Producer Email:</label>
-                <input type="email" class="form-control" placeholder="Example@Example.com"  required>
-              </div>
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Producer Phone:</label>
-                <input type="tel" class="form-control" placeholder="00201013754233"  required>
-              </div>
+    <!--&lt;!&ndash; add producer modal &ndash;&gt;-->
+    <!--<div class="modal fade" id="addprod" tabindex="-1" role="dialog" aria-labelledby="addprodLabel">-->
+      <!--<div class="modal-dialog" role="document">-->
+        <!--<div class="modal-content">-->
+          <!--<div class="modal-header">-->
+            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+            <!--<h4 class="modal-title" id="addprodLabel">Add Producer</h4>-->
+          <!--</div>-->
+          <!--<div class="modal-body">-->
+            <!--<form id="addprodform">-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Producer Name:</label>-->
+                <!--<input type="text" class="form-control" id="addprodinput" required>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Producer Email:</label>-->
+                <!--<input type="email" class="form-control" placeholder="Example@Example.com"  required>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Producer Phone:</label>-->
+                <!--<input type="tel" class="form-control" placeholder="00201013754233"  required>-->
+              <!--</div>-->
 
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
-            <button type="submit" form="addprodform"  id="addprodsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Producer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end add producer modal -->
+            <!--</form>-->
+          <!--</div>-->
+          <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>-->
+            <!--<button type="submit" form="addprodform"  id="addprodsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Producer</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; end add producer modal &ndash;&gt;-->
 
-    <!-- add Distribution Company modal -->
-    <div class="modal fade" id="adddist" tabindex="-1" role="dialog" aria-labelledby="adddistLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="adddistLabel">Add Distribution Company</h4>
-          </div>
-          <div class="modal-body">
-            <form id="adddistform">
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Distribution Company Name:</label>
-                <input type="text" class="form-control" id="adddistinput" required>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
-            <button type="submit" form="adddistform" id="adddistsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Distribution Company</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end add Distribution modal -->
+    <!--&lt;!&ndash; add Distribution Company modal &ndash;&gt;-->
+    <!--<div class="modal fade" id="adddist" tabindex="-1" role="dialog" aria-labelledby="adddistLabel">-->
+      <!--<div class="modal-dialog" role="document">-->
+        <!--<div class="modal-content">-->
+          <!--<div class="modal-header">-->
+            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+            <!--<h4 class="modal-title" id="adddistLabel">Add Distribution Company</h4>-->
+          <!--</div>-->
+          <!--<div class="modal-body">-->
+            <!--<form id="adddistform">-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Distribution Company Name:</label>-->
+                <!--<input type="text" class="form-control" id="adddistinput" required>-->
+              <!--</div>-->
+            <!--</form>-->
+          <!--</div>-->
+          <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>-->
+            <!--<button type="submit" form="adddistform" id="adddistsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Distribution Company</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; end add Distribution modal &ndash;&gt;-->
 
-    <!-- add Production Company modal -->
-    <div class="modal fade" id="addproduct" tabindex="-1" role="dialog" aria-labelledby="addproductLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="addproductLabel">Add Production Company</h4>
-          </div>
-          <div class="modal-body">
-            <form id="addproductform">
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Production Company Name:</label>
-                <input type="text" class="form-control" id="addproductinput" required>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>
-            <button type="submit" form="addproductform" id="addproductsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Production Company</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--&lt;!&ndash; add Production Company modal &ndash;&gt;-->
+    <!--<div class="modal fade" id="addproduct" tabindex="-1" role="dialog" aria-labelledby="addproductLabel">-->
+      <!--<div class="modal-dialog" role="document">-->
+        <!--<div class="modal-content">-->
+          <!--<div class="modal-header">-->
+            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+            <!--<h4 class="modal-title" id="addproductLabel">Add Production Company</h4>-->
+          <!--</div>-->
+          <!--<div class="modal-body">-->
+            <!--<form id="addproductform">-->
+              <!--<div class="form-group">-->
+                <!--<label for="recipient-name" class="control-label">Production Company Name:</label>-->
+                <!--<input type="text" class="form-control" id="addproductinput" required>-->
+              <!--</div>-->
+            <!--</form>-->
+          <!--</div>-->
+          <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">  <i class="fa fa-close"></i> Close</button>-->
+            <!--<button type="submit" form="addproductform" id="addproductsubmit"  class="btn orange-default btn-outline sbold">  <i class="fa fa-plus-circle"></i> Add Production Company</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
     <!-- end add Production Company modal -->
 <!-- end modals -->
 
 <!-- Javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/lib/jquery-1.11.2.min.js"></script>
+<script src="../js/lib/jquery-1.11.2.min.js"></script>
 <!--<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>-->
 <!--plugins-->
-<script src="js/lib/bootstrap.min.js"></script>
-<script src="js/lib/js.cookie.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="../js/lib/bootstrap.min.js"></script>
+<script src="../js/lib/js.cookie.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery.blockui.min.js" type="text/javascript"></script>
 <!--<script src="js/vendors/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>-->
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <!--<script src="js/vendors/moment.min.js" type="text/javascript"></script>-->
 <!--<script src="js/vendors/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>-->
-<script src="js/lib/vendors/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/vendor/tmpl.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/vendor/load-image.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/vendor/canvas-to-blob.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-process.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-image.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-audio.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-video.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-validate.js" type="text/javascript"></script>
-<script src="js/lib/vendors/jquery-file-upload/js/jquery.fileupload-ui.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/vendor/tmpl.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/vendor/load-image.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/vendor/canvas-to-blob.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.fileupload.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.fileupload-process.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.fileupload-image.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.fileupload-audio.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.fileupload-video.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.fileupload-validate.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/jquery-file-upload/js/jquery.fileupload-ui.js" type="text/javascript"></script>
 <!--<script src="js/vendors/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>-->
 <!--<script src="js/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>-->
 <!--<script src="js/vendors/clockface/js/clockface.js" type="text/javascript"></script>-->
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
-<script src="js/lib/vendors/scripts/app.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/scripts/app.min.js" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="js/lib/vendors/select2/js/select2.full.min.js"></script>
-<script src="js/lib/vendors/scripts/components-select2.min.js" type="text/javascript"></script>
-<script src="js/lib/vendors/scripts/form-fileupload.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/select2/js/select2.full.min.js"></script>
+<script src="../js/lib/vendors/scripts/components-select2.min.js" type="text/javascript"></script>
+<script src="../js/lib/vendors/scripts/form-fileupload.min.js" type="text/javascript"></script>
 
 
 <!-- END PAGE LEVEL SCRIPTS -->
@@ -1869,9 +452,9 @@
 <!--<script src="js/vendors/scripts/quick-sidebar.min.js" type="text/javascript"></script>-->
 <!-- END THEME LAYOUT SCRIPTS -->
 
-<script src="js/app/main.js"></script>
-<script src="js/app/create_edit_film.js"></script>
-<script src="js/lib/file_upload.js"></script>
+<script src="../js/app/main.js"></script>
+<script src="../js/app/create_edit_film.js"></script>
+<script src="../js/lib/file_upload.js"></script>
 
 
 
