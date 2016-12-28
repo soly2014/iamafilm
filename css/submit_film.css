@@ -1,4 +1,6 @@
-
+.margin-0{
+    margin-left: 0;
+}
 .box {
     overflow: hidden;
     padding: 10px;
@@ -132,10 +134,22 @@
     padding: 0
 }
 .navbar-brand > img {
-    display: block;
+    /* display: block; */
     max-width: 200px;
+    margin-top: -10px;
 }
 
 .festival-filter span {
     width: 20%;
+}
+
+@media screen and (max-width: 500px) {
+    * {
+        font-size:95%;
+    }
+    .navbar-brand > img {
+        /* display: block; */
+        max-width: 200px;
+        margin-top: -10px;
+    }
 }

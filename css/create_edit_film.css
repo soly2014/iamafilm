@@ -1994,6 +1994,22 @@ li [class^=icon-].icon-large {
 .btn:hover {
     transition: all .3s
 }
+.btn-primary {
+    color: #fff;
+    background-color: #ff755a;
+    border-color: #ff755a;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #fb4d2b;
+    border-color: #fb4d2b;
+}
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #fd6143;
+    border-color: #fd6143;
+}
 
 .btn:not(.btn-sm):not(.btn-lg) {
     line-height: 1.44
@@ -29516,5 +29532,9 @@ body[ng-controller] .modal {
     }
     .mt-content-row .mt-content-col-fixed .mt-content-sidebar {
         margin-left: 0
+    }
+
+    margin-20{
+        margin-bottom: 20px;
     }
 }
